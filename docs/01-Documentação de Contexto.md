@@ -1,6 +1,12 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+Apesar do espírito empreendedor dos brasileiros, empreender frequentemente se revela desafiador devido à significativa burocracia e elevados custos. Essa realidade é evidenciada no **Índice de Burocracia da América Latina (2022)**, conduzido pela *Atlas Network* em colaboração com o *Adam Smith Center for Economic Freedom*. No contexto brasileiro, micro e pequenas empresas dedicam, em média, 180 horas anuais para questões burocráticas, correspondendo a 22,5 dias úteis. (*Índice de Burocracia da América Latina, 2022; Atlas Network em colaboração com o Adam Smith Center for Economic Freedom; Acesso em: 04/03/2024*). 
+
+O gerenciamento de operações emerge como a área mais burocrática, absorvendo 57,7% desse tempo. Pequenos negócios enfrentam desafios no acesso a recursos essenciais, como uma gestão de estoque eficiente e digital. O **Índice de Produtividade Tecnológica (IPT) de logística**, conduzido pela *H2R Pesquisas Avançadas*, revela que, embora 92% dos varejistas brasileiros tenham um setor dedicado à gestão de armazenagem, apenas 38% investem em sistemas de gestão para essa área. (*Índice de Produtividade Tecnológica (IPT) de logística; H2R Pesquisas Avançadas e TOTVS; Acesso em: 04/03/2024*). 
+
+O estudo evidencia a baixa priorização do investimento em tecnologia para integrar logística e estoque devido aos custos elevados no Brasil. Os sistemas de **ERP (Enterprise Resource Planning)** destacam-se como os mais utilizados na gestão empresarial. Analisando características desses sistemas, *Padilha e Marins (2005)* afirmam que eles apresentam custos elevados, notadamente nas áreas de hardware, infraestrutura computacional, aquisição de licenças, treinamento e consultoria para a implantação (*PADILHA; MARINS, 2005, p. 108*).    
+
+Diante desse problema, a solução proposta é a criação de uma aplicação que torna parte desse sistema acessível aos empreendedores de baixo capital.
 
 ## Problema
 Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
