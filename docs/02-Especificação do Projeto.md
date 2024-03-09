@@ -28,17 +28,20 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
-
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
+|	Claudia -> Assistente de Recebimento  | verificar e validar as quantidades recebidas em relação aos pedidos de compras  | poder identificar discrepâncias e resolvê-las rapidamente  |
+| Claudia -> Assistente de Recebimento	|	registrar facilmente a entrada de produtos ou matérias-primas	  |	possa manter o controle de estoque atualizado	| 	 	
+|	Fernado -> Auxiliar de Expedição	| ter acesso a uma lista clara com informações de pedidos prontos para envio | relacionar a venda de pedidos com a saída do produto, poder priorizar e preparar os envios de forma eficiente e sem erros  |
+|	Fernado → Auxiliar de Expedição	|	ter um método simples para gerenciar e documentar as saídas dos produtos | o processo de expedição ser rápido e sem erros e manter o controle de estoque atualizado |
+|	Ana -> Empreendedora |	acessar relatório de vendas | poder analisar o desempenho das vendas e fazer alinhamento de meta |  
+|   Ana -> Empreendedora | acessar relatório de estoque 	|	poder analisar a situação do estoque, de produtos acabados e matéria prima |
+|	Geovana -> Analista de PCP  | ser capaz de cadastrar e atualizar listas técnicas dos produtos    | poder garantir uma produção precisa, com todos os materiais necessários especificados e disponíveis   |
+|	Geovana -> Analista de PCP |	ser capaz de registrar o lançamento de produção de acordo com as ordens de fabricação | poder monitorar o progresso da produção e garantir a fabricação de produtos dentro do planejamento |
+|	Geovana -> Analista de PCP	| ser capaz de cadastrar os produtos acabados 	| possibilitar a montagem das listas técnicas dos produtos 	|
+|	Will -> Vendedor |  poder registrar novas vendas ou pedidos de produtos de forma rápida e eficiente   | ter controle financeiro eficaz e garantir que os pedidos sejam processados corretamente |
+|	Will -> Vendedor | ter acesso rápido e fácil às informações de estoque e disponibilidade de produtos |  poder fornecer aos clientes informações sobre disponibilidade de produtos e prazos de entrega, e não realizar vendas além da quantidade presente no estoque  	|
+|  Jean -> Comprador | criar, visualizar e gerenciar pedidos de compra   |	garantir que o estoque esteja com as necessidades de produção atendidas | 
+|	Jean -> Comprador | poder cadastrar fornecedores no sistema | manter um registro organizado e atualizado dos contatos e informações dos fornecedores que a empresa faz negócios |
+|	Jean -> Comprador | poder cadastrar as matérias primas de maneira eficiente 	| para ter o registro dos detalhes das matérias primas que serão compradas 	|
 
 ## Requisitos
 
@@ -55,23 +58,12 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| A aplicação deve ser responsiva | MÉDIA | 
-|RNF-002| A aplicação deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+|RNF-001| O sistema deve ter interface de usuário intuitiva e clara.  | ALTA | 
+|RNF-002| O sistema deve ser compatível com os principais navegadores (Google Chrome, Firefox, Microsoft Edge).  |  MÉDIA | 
+|RNF-003| O sistema deve ser desenvolvido seguindo boas práticas e convenções de codificação em C#.   		| MÉDIA	|
+|RNF-004| O sistema deve incluir medidas básicas de segurança, como autenticação de usuários.		| ALTA |
+|RNF-005| O sistema deve ser responsivo e se adaptar a diferentes tamanhos de tela (desktop, celular, tablet). 		| BAIXA |
+|RNF-006| O sistema deve ser desenvolvido de forma modular.		| MÉDIA	|
 
 ## Restrições
 
