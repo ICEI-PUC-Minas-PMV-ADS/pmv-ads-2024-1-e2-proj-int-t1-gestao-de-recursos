@@ -79,11 +79,12 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
-
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
+| RE-01| O sistema deve ser desenvolvido usando uma arquitetura MVC.        |
+| RE-02| Não é permitido à equipe terceirizar o desenvolvimento do trabalho.|
+| RE-03| O design do site deve seguir as diretrizes e requisitos estabelecidos, como o uso de cores específicas, logotipos e estilo de fonte.|
+| RE-04| O código do Back-end deverá ser feito em C#                        |
+| RE-05| O projeto deverá ser entregue até o final do semestre - 23/06/2024|
+| RE-06| As decisões pertinentes ao projeto devem ser tomadas por meio democrático de votação.|
 
 > **Links Úteis**:
 > - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
