@@ -49,10 +49,23 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| A aplicação deve permitir que o usuário gerencie suas tarefas | ALTA | 
-|RF-002| A aplicação deve emitir um relatório de tarefas realizadas no mês   | MÉDIA |
+| ID   | Descrição                                                            | Prioridade |
+|------|----------------------------------------------------------------------|------------|
+| RF-01| O sistema deve conter cadastro de perfis de usuário.                 | Média      |
+| RF-02| O sistema deve conter cadastro de usuários.                          | Alta       |
+| RF-03| O usuário deve ter um perfil atribuído a ele.                        | Média      |
+| RF-04| O sistema deve conter cadastros de matéria prima e produto acabado. | Alta       |
+| RF-05| O sistema deve conter lançamentos de movimentações de mercadoria.    | Alta       |
+| RF-06| O sistema deve conter lançamentos de compras e vendas.              | Alta       |
+| RF-07| O usuário deverá estar logado para acessar o sistema.                | Alta       |
+| RF-08| O usuário só poderá acessar as funcionalidades atribuídas ao seu perfil. | Média  |
+| RF-09| O usuário Administrador deve ter todo o controle de usuários e seus perfis. | Média |
+| RF-10| O sistema deve conter cadastro de listas técnicas.                   | Baixa      |
+| RF-11| O sistema deve ter lançamento de produção.                           | Baixa      |
+| RF-12| O sistema deve ter cadastro de fornecedores.                         | Média      |
+| RF-13| O sistema deve conter uma parte dedicada a relatório de estoque (Cruzando a saída, a entrada e a produção, para relatar quanto há de produto acabado e matéria prima em estoque) | Alta |
+| RF-14| O sistema deve conter uma parte dedicada a relatório de vendas.      | Alta       |
+
 
 ### Requisitos não Funcionais
 
