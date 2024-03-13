@@ -97,11 +97,12 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## Diagrama de Casos de Uso
 
-Diagrama de casos de uso de um sistema de gestão de estoque.
+Diagrama de casos de uso de um sistema de gestão de recursos.
 
 
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/65174193/0c63f202-fc20-4b03-88fe-41788e323ccf)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/65174193/bf307be0-b2e8-440c-8877-b6881f2f60aa)
+
 
 
 
