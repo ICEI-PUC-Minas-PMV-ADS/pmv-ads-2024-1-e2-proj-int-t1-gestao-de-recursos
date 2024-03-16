@@ -32,14 +32,6 @@ Para garantir o sucesso do projeto, serão empregadas técnicas e ferramentas es
 Essa abordagem estruturada assegurará que o sistema desenvolvido esteja alinhado com as necessidades dos usuários e os objetivos do negócio, ao mesmo tempo em que cumpre com as restrições do projeto. O resultado será um sistema de gerenciamento empresarial sob medida, projetado para impulsionar a eficiência e o sucesso organizacional. Estou disponível para fornecer mais assistência ou detalhes sobre qualquer uma dessas etapas, conforme necessário.
 
 
-
-
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
-
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
-
 ## Personas
 
 Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
