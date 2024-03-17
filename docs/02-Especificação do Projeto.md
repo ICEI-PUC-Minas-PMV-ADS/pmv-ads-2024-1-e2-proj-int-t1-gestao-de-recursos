@@ -34,9 +34,12 @@ Essa abordagem estruturada assegurará que o sistema desenvolvido esteja alinhad
 
 ## Personas
 
-<p align="center">
-<img src=pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/docs/img/personas/ANA PEDROSO DE FREITAS-1.png>
-</p>
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/blob/main/docs/img/personas/ANA%20PEDROSO%20DE%20FREITAS-1.png)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/blob/main/docs/img/personas/CL%C3%81UDIA%20RIBEIRO%20DURVAL-1.png)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/blob/main/docs/img/personas/FERNANDO%20VIEIRA%20SANTIAGO-1.png)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/blob/main/docs/img/personas/GEOVANA%20OLIVEIRA%20BARROSO-1.png)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/blob/main/docs/img/personas/JEAN%20COSTA%20BARROS-1.png)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/blob/main/docs/img/personas/WILL%20GOMES%20MOTOS-1.png)
 
 ## Histórias de Usuários
 
