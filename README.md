@@ -2,7 +2,7 @@
 
 `ANALISE E DESENVOLVIMENTO DE SISTEMA `
 
-`Projeto: Desenvolvimento de Aplicação Interativa - Turma 02`
+`Projeto: Desenvolvimento de Aplicação Interativa - Turma 01`
 
 `1 SEMESTRE de 2024 - EIXO 02`
 
