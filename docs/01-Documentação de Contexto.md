@@ -9,11 +9,8 @@ O estudo evidencia a baixa priorização do investimento em tecnologia para inte
 Diante desse problema, a solução proposta é a criação de uma aplicação que torna parte desse sistema acessível aos empreendedores de baixo capital.
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
+O alto custo de licenças, e de profissionais de análise de sistemas; e a alta curva de aprendizado para o uso dos softwares de gestão convencionais, é prejudicial para pequenos empreendedores que não tem recursos financeiros, ou preparo para a utilização dos tais. 
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
 
 > **Links Úteis**:
 > - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
@@ -22,9 +19,27 @@ Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thin
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+O objetivo deste projeto é entregar um sistema de gerenciamento de recursos que seja acessível financeiramente e em sua usabilidade, incentivando uma melhor gestão para os pequenos empreendedores. 
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
+Objetivos específicos: 
+
+1. Sistema deve ser de simples usabilidade 
+
+1. O projeto deve ser Open Source 
+
+1. Deve conter as funcionalidades de: 
+
+   1. Controle de entrada de produtos/cargas (Matérias primas, ou Produtos de revenda) na empresa. 
+
+   1. Gestão de produção a partir das matérias primas cadastradas. 
+
+   1. Controle de saída de produtos acabados, ou produtos de revenda.  
+
+   1. Gestão de compras, e vendas. 
+
+   1. Geração de relatórios 
+
+ 
  
 > **Links Úteis**:
 > - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
