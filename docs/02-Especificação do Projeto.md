@@ -35,7 +35,8 @@ Essa abordagem estruturada assegurará que o sistema desenvolvido esteja alinhad
 ## Personas
 
 <p align="center">
-<img src="img/Personas/ANA PEDROSO DE FREITAS-1.png" >
+<img src="pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/docs
+img/Personas/ANA PEDROSO DE FREITAS-1.png" >
 </p>
 
 <p align="center">
