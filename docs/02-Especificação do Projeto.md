@@ -38,26 +38,6 @@ Essa abordagem estruturada assegurará que o sistema desenvolvido esteja alinhad
 <img src=pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/docs/img/personas/ANA PEDROSO DE FREITAS-1.png>
 </p>
 
-<p align="center">
-<img src="img/Personas/" >
-</p>
-
-<p align="center">
-<img src="img/Personas/" >
-</p>
-
-<p align="center">
-<img src="img/Personas/" >
-</p>
-
-<p align="center">
-<img src="img/Personas/" >
-</p>
-
-<p align="center">
-<img src="img/Personas/" >
-</p>
-
 ## Histórias de Usuários
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
