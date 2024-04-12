@@ -86,8 +86,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 | ID   | Descrição                                                            | Prioridade |
 |------|----------------------------------------------------------------------|------------|
-| RF-01| O sistema deve conter cadastro de perfis de usuário.                 | Média      |
-| RF-02| O sistema deve conter cadastro de usuários.                          | Alta       |
+| RF-01| O sistema deve conter cadastros e logins de usuários.                  | Média      |
+| RF-02|  O sistema deve conter cadastro de perfis de usuário.                        | Alta       |
 | RF-03| O usuário deve ter um perfil atribuído a ele.                        | Média      |
 | RF-04| O sistema deve conter cadastros de matéria prima e produto acabado. | Alta       |
 | RF-05| O sistema deve conter lançamentos de movimentações de mercadoria.    | Alta       |
