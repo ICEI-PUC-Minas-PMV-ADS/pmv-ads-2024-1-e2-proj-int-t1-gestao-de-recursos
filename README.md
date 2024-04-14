@@ -1,19 +1,21 @@
 # TÍTULO DO PROJETO
 
-`CURSO`
+`ANALISE E DESENVOLVIMENTO DE SISTEMA `
 
-`DISCIPLINA`
+`Projeto: Desenvolvimento de Aplicação Interativa - Turma 01`
 
-`SEMESTRE`
+`1 SEMESTRE de 2024 - EIXO 02`
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
 ## Integrantes
 
 - Tomaz Martins Pereira Pontes 
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+- Renê Matias de Misquita
+- Marcos Vinicio Araújo Almeida
+- Jessica Hora dos Santos
+- Nico Rocha da Costa
+- Thiago Bastani Pontel
 
 ## Orientador
 

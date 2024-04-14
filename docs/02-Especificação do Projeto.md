@@ -1,26 +1,61 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
 
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
+**Introdução: Modernizando o Gerenciamento Empresarial**
 
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
+No contexto empresarial atual, a eficiência operacional é crucial para manter a competitividade e alcançar o sucesso. No entanto, muitas empresas enfrentam desafios significativos devido à falta de um sistema integrado capaz de gerenciar de forma eficiente suas atividades fundamentais, desde o recebimento até a produção e venda de produtos.
+
+A ausência de um sistema robusto resulta em processos manuais propensos a erros, ineficiências na gestão de estoque e vendas, além de dificuldades na tomada de decisões estratégicas. Para superar esses obstáculos e impulsionar a eficiência empresarial, propõe-se o desenvolvimento de um sistema de gerenciamento empresarial personalizado.
+
+**Ideia de Solução: Desenvolvendo um Sistema Sob Medida**
+
+A solução proposta visa criar um sistema de gerenciamento empresarial personalizado, adaptado às necessidades específicas de cada usuário dentro da empresa. Esse sistema deve oferecer funcionalidades que permitam aos usuários realizar suas tarefas de forma eficiente, garantindo a precisão dos dados e otimizando os processos de negócios.
+
+**Visão Geral das Especificações do Projeto: Abordagem Estruturada para o Sucesso**
+
+Para garantir o sucesso do projeto, serão empregadas técnicas e ferramentas específicas:
+
+- **Diagrama de Personas:** Criaremos um diagrama representando as diferentes personas e suas relações com as funcionalidades do sistema, garantindo que todas as necessidades sejam contempladas.
+  
+- **Histórias de Usuários:** Desenvolveremos histórias detalhadas para cada persona, destacando suas necessidades específicas e como o sistema irá atendê-las de forma eficaz.
+  
+- **Requisitos Funcionais e Não Funcionais:** Elaboraremos uma lista detalhada de requisitos, priorizando-os e garantindo que abordem todos os aspectos necessários para o funcionamento do sistema.
+  
+- **Restrições do Projeto:** Analisaremos cuidadosamente as restrições impostas ao projeto, como limitações tecnológicas, orçamentárias e de tempo, planejando estratégias para trabalhar dentro desses parâmetros.
+  
+- **Modelagem de Processos:** Utilizaremos ferramentas de modelagem para mapear os processos de negócios e definir como o sistema irá aprimorá-los, garantindo uma visão clara do fluxo de trabalho.
+  
+- **Prototipagem:** Criaremos protótipos para testar a usabilidade das interfaces e coletar feedback valioso para aprimoramentos contínuos.
+  
+- **Metodologias Ágeis:** Implementaremos metodologias ágeis para permitir flexibilidade e adaptabilidade durante o desenvolvimento do sistema, garantindo uma resposta rápida às mudanças e necessidades emergentes.
+
+Essa abordagem estruturada assegurará que o sistema desenvolvido esteja alinhado com as necessidades dos usuários e os objetivos do negócio, ao mesmo tempo em que cumpre com as restrições do projeto. O resultado será um sistema de gerenciamento empresarial sob medida, projetado para impulsionar a eficiência e o sucesso organizacional. Estou disponível para fornecer mais assistência ou detalhes sobre qualquer uma dessas etapas, conforme necessário.
+
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/blob/main/docs/img/personas/ANA%20PEDROSO%20DE%20FREITAS-1.png)
+<h2 align="center">FIGURA 01</h2>
+<br/><br/>
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/blob/main/docs/img/personas/CL%C3%81UDIA%20RIBEIRO%20DURVAL-1.png)
+<h2 align="center">FIGURA 02</h2>
+<br/><br/>
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/blob/main/docs/img/personas/FERNANDO%20VIEIRA%20SANTIAGO-1.png)
+<h2 align="center">FIGURA 03</h2>
+<br/><br/>
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/blob/main/docs/img/personas/GEOVANA%20OLIVEIRA%20BARROSO-1.png)
+<h2 align="center">FIGURA 04</h2>
+<br/><br/>
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/blob/main/docs/img/personas/JEAN%20COSTA%20BARROS-1.png)
+<h2 align="center">FIGURA 05</h2>
+<br/><br/>
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/blob/main/docs/img/personas/WILL%20GOMES%20MOTOS-1.png)
+<h2 align="center">FIGURA 06</h2>
 
 ## Histórias de Usuários
 
@@ -28,17 +63,20 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
-
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
+|	Claudia -> Assistente de Recebimento  | verificar e validar as quantidades recebidas em relação aos pedidos de compras  | poder identificar discrepâncias e resolvê-las rapidamente  |
+| Claudia -> Assistente de Recebimento	|	registrar facilmente a entrada de produtos ou matérias-primas	  |	possa manter o controle de estoque atualizado	| 	 	
+|	Fernado -> Auxiliar de Expedição	| ter acesso a uma lista clara com informações de pedidos prontos para envio | relacionar a venda de pedidos com a saída do produto, poder priorizar e preparar os envios de forma eficiente e sem erros  |
+|	Fernado → Auxiliar de Expedição	|	ter um método simples para gerenciar e documentar as saídas dos produtos | o processo de expedição ser rápido e sem erros e manter o controle de estoque atualizado |
+|	Ana -> Empreendedora |	acessar relatório de vendas | poder analisar o desempenho das vendas e fazer alinhamento de meta |  
+|   Ana -> Empreendedora | acessar relatório de estoque 	|	poder analisar a situação do estoque, de produtos acabados e matéria prima |
+|	Geovana -> Analista de PCP  | ser capaz de cadastrar e atualizar listas técnicas dos produtos    | poder garantir uma produção precisa, com todos os materiais necessários especificados e disponíveis   |
+|	Geovana -> Analista de PCP |	ser capaz de registrar o lançamento de produção de acordo com as ordens de fabricação | poder monitorar o progresso da produção e garantir a fabricação de produtos dentro do planejamento |
+|	Geovana -> Analista de PCP	| ser capaz de cadastrar os produtos acabados 	| possibilitar a montagem das listas técnicas dos produtos 	|
+|	Will -> Vendedor |  poder registrar novas vendas ou pedidos de produtos de forma rápida e eficiente   | ter controle financeiro eficaz e garantir que os pedidos sejam processados corretamente |
+|	Will -> Vendedor | ter acesso rápido e fácil às informações de estoque e disponibilidade de produtos |  poder fornecer aos clientes informações sobre disponibilidade de produtos e prazos de entrega, e não realizar vendas além da quantidade presente no estoque  	|
+|  Jean -> Comprador | criar, visualizar e gerenciar pedidos de compra   |	garantir que o estoque esteja com as necessidades de produção atendidas | 
+|	Jean -> Comprador | poder cadastrar fornecedores no sistema | manter um registro organizado e atualizado dos contatos e informações dos fornecedores que a empresa faz negócios |
+|	Jean -> Comprador | poder cadastrar as matérias primas de maneira eficiente 	| para ter o registro dos detalhes das matérias primas que serão compradas 	|
 
 ## Requisitos
 
@@ -46,32 +84,34 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| A aplicação deve permitir que o usuário gerencie suas tarefas | ALTA | 
-|RF-002| A aplicação deve emitir um relatório de tarefas realizadas no mês   | MÉDIA |
+| ID   | Descrição                                                            | Prioridade |
+|------|----------------------------------------------------------------------|------------|
+| RF-01| O sistema deve conter cadastros e logins de usuários.                  | Média      |
+| RF-02|  O sistema deve conter cadastro de perfis de usuário.                        | Alta       |
+| RF-03| O usuário deve ter um perfil atribuído a ele.                        | Média      |
+| RF-04| O sistema deve conter cadastros de matéria prima e produto acabado. | Alta       |
+| RF-05| O sistema deve conter lançamentos de movimentações de mercadoria.    | Alta       |
+| RF-06| O sistema deve conter lançamentos de compras e vendas.              | Alta       |
+| RF-07| O usuário deverá estar logado para acessar o sistema.                | Alta       |
+| RF-08| O usuário só poderá acessar as funcionalidades atribuídas ao seu perfil. | Média  |
+| RF-09| O usuário Administrador deve ter todo o controle de usuários e seus perfis. | Média |
+| RF-10| O sistema deve conter cadastro de listas técnicas.                   | Baixa      |
+| RF-11| O sistema deve ter lançamento de produção.                           | Baixa      |
+| RF-12| O sistema deve ter cadastro de fornecedores.                         | Média      |
+| RF-13| O sistema deve conter uma parte dedicada a relatório de estoque (Cruzando a saída, a entrada e a produção, para relatar quanto há de produto acabado e matéria prima em estoque) | Alta |
+| RF-14| O sistema deve conter uma parte dedicada a relatório de vendas.      | Alta       |
+
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| A aplicação deve ser responsiva | MÉDIA | 
-|RNF-002| A aplicação deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+|RNF-001| O sistema deve ter interface de usuário intuitiva e clara.  | ALTA | 
+|RNF-002| O sistema deve ser compatível com os principais navegadores (Google Chrome, Firefox, Microsoft Edge).  |  MÉDIA | 
+|RNF-003| O sistema deve ser desenvolvido seguindo boas práticas e convenções de codificação em C#.   		| MÉDIA	|
+|RNF-004| O sistema deve incluir medidas básicas de segurança, como autenticação de usuários.		| ALTA |
+|RNF-005| O sistema deve ser responsivo e se adaptar a diferentes tamanhos de tela (desktop, celular, tablet). 		| BAIXA |
+|RNF-006| O sistema deve ser desenvolvido de forma modular.		| MÉDIA	|
 
 ## Restrições
 
@@ -92,13 +132,14 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## Diagrama de Casos de Uso
 
-O diagrama de casos de uso é o próximo passo após a elicitação de requisitos, que utiliza um modelo gráfico e uma tabela com as descrições sucintas dos casos de uso e dos atores. Ele contempla a fronteira do sistema e o detalhamento dos requisitos funcionais com a indicação dos atores, casos de uso e seus relacionamentos. 
+Diagrama de casos de uso de um sistema de gestão de recursos.
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de Casos de Uso”.
 
-> **Links Úteis**:
-> - [Criando Casos de Uso](https://www.ibm.com/docs/pt-br/elm/6.0?topic=requirements-creating-use-cases)
-> - [Como Criar Diagrama de Caso de Uso: Tutorial Passo a Passo](https://gitmind.com/pt/fazer-diagrama-de-caso-uso.html/)
-> - [Lucidchart](https://www.lucidchart.com/)
-> - [Astah](https://astah.net/)
-> - [Diagrams](https://app.diagrams.net/)
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/65174193/909b5f4a-f943-4608-887d-5f776cde956d)
+
+
+
+
+
+

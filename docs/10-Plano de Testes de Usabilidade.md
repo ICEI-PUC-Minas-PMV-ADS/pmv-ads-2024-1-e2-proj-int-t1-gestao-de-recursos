@@ -2,7 +2,7 @@
 
 O planejamento dos testes de usabilidade a serem realizados com usuários são descritos na tabela a seguir:
 
-| **Caso de Teste** 	| **CTU-01 – Interface Intuitiva e Clara** 	|
+| **Caso de Teste** 	| **CTU-01 – Interface intuitiva e clara** 	|
 | :---:	| :---:	|
 | Requisito Associado | RNF-001 - O sistema deve ter interface de usuário intuitiva e clara. |
 | Objetivo do Teste 	| Verificar se a interface do sistema é fácil de entender e usar para os usuários. |
@@ -38,3 +38,4 @@ O planejamento dos testes de usabilidade a serem realizados com usuários são d
 | Objetivo do Teste 	| Verificar se os módulos do sistema possui funcionalidade bem definida, coesa e com baixo acoplamento. |
 | Passos 	| 1. Para cada módulo, verifique o alinhamento de sua funcionalidade e os requisitos relacionados ao módulo. <br>2. Teste a funcionalidade dos módulos, verifique se realiza a funcionalidade esperada de forma eficaz.<br> 3. Verifique se as operações do módulo estão trabalhando para um objetivo comum. <br> 4. Verifique o nível de acoplamento entre os módulos, se o módulo depende de outros módulos para exercer sua funcionalidade. |
 | Critério de Êxito | 1. O módulo deve realizar a funcionalidade esperada de forma eficaz. <br> 2. Todas as operações dentro do módulo devem trabalhar para um objetivo comum (não conter operações que não estão sendo usadas, ou que não estão relacionadas com a sua funcionalidade principal).<br> 3. Possuir baixo acoplamento, de modo que alterações em um módulo não deve afetar significativamente outros módulos. <br>  |
+

@@ -1,25 +1,43 @@
 # Plano de Testes de Software
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>
-
-Apresente os cenários de testes utilizados na realização dos testes da sua aplicação. Escolha cenários de testes que demonstrem os requisitos sendo satisfeitos.
-
-Não deixe de enumerar os casos de teste de forma sequencial e de garantir que o(s) requisito(s) associado(s) a cada um deles está(ão) correto(s) - de acordo com o que foi definido na seção "2 - Especificação do Projeto". 
-
-Por exemplo:
+Os testes funcionais a serem ralizados no aplicativo são descritos a seguir:
  
-| **Caso de Teste** 	| **CT-01 – Cadastrar perfil** 	|
+| **Caso de Teste** 	| **CT-01 – Cadastrar Usuário** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-00X - A aplicação deve apresentar, na página principal, a funcionalidade de cadastro de usuários para que esses consigam criar e gerenciar seu perfil. |
-| Objetivo do Teste 	| Verificar se o usuário consegue se cadastrar na aplicação. |
-| Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://adota-pet.herokuapp.com/src/index.html<br> - Clicar em "Criar conta" <br> - Preencher os campos obrigatórios (e-mail, nome, sobrenome, celular, CPF, senha, confirmação de senha) <br> - Aceitar os termos de uso <br> - Clicar em "Registrar" |
-|Critério de Êxito | - O cadastro foi realizado com sucesso. |
+|	Requisito Associado 	| RF - 01 - O sistema deve permitir novos usuários se cadastrarem e efetuarem login para acessar suas funcionalidades. |
+| Objetivo do Teste 	| Verificar se é possível cadastra usuário e realizar login na aplicação. |
+| Passos 	| 1. Acessar o navegador <br> 2. Informar o endereço da aplicação <br> 3. Acessar a área de cadastro de usuário <br> 4. Preencher os dados necessários (nome, email e senha) <br> 5. Salvar cadastro <br> 6. Clicar em "Login" <br> 7. Informar usuário valido e senha válida |
+|Critério de Êxito | Cadastro realizado com sucesso e login efetuado |
 |  	|  	|
-| Caso de Teste 	| CT-02 – Efetuar login	|
-|Requisito Associado | RF-00Y	- A aplicação deve possuir opção de fazer login, sendo o login o endereço de e-mail. |
-| Objetivo do Teste 	| Verificar se o usuário consegue realizar login. |
-| Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://adota-pet.herokuapp.com/src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" |
-|Critério de Êxito | - O login foi realizado com sucesso. |
+| **Caso de Teste** 	| **CT-02 – Cadastrar Perfil de Usuário** 	|
+|	Requisito Associado 	| RF - 02 - O sistema deve permitir o cadastro de perfis de usuários.|
+| Objetivo do Teste 	| Verificar se é possível fazer o cadastra do perfil de usuário. |
+| Passos 	| 1. Acessar o navegador <br> 2. Informar o endereço da aplicação <br> 3. Acessar a área de cadastro de usuário <br> 4. Preencher os dados necessários (nome, email e senha) <br> 5. Salvar cadastro <br> 6. Clicar em "Login" <br> 7. Informar usuário valido e senha válida <br> 8. Clicar na aba Perfis de Usuário <br> 9. Clicar em adicionar usuário  |
+|Critério de Êxito | Perfil de usuário cadastrado com sucesso |
+|  	|  	|
+| **Caso de Teste** 	| **CT-03 – Atribuir um perfil ao usuário** 	|
+|	Requisito Associado 	| RF - 03 - O sistema deve permitir que o usuário tenha um perfil.|
+| Objetivo do Teste 	| Verificar se é possível atribuir um perfil ao usuário. |
+| Passos 	| 1. Acessar o navegador <br> 2. Informar o endereço da aplicação <br> 3. Acessar a área de cadastro de usuário <br> 4. Preencher os dados necessários (nome, email e senha) <br> 5. Salvar cadastro <br> 6. Clicar em "Login" <br> 7. Informar usuário valido e senha válida <br> 8. Clicar na aba Perfis de Usuário <br> 9. Clicar em adicionar usuário <br> 10. Adicionar o perfil ao usuário (Administrador, Compras, Vendas, Produção)  |
+|Critério de Êxito | Perfil de usuário atribuido com sucesso |
+|  	|  	|
+| **Caso de Teste** 	| **CT-04 – Cadastro de matéria prima e produto acabado** 	|
+|	Requisito Associado 	| RF - 04 - O sistema deve permitir que cada perfil de usuario possa fazer o cadastro de matéria prima e produto acabado.|
+| Objetivo do Teste 	| Verificar se é possível que cada perfil de usuario façaa o cadastro de matéria prima e produto acabado . |
+| Passos 	| 1. Acessar o navegador <br> 2. Informar o endereço da aplicação <br> 3. Acessar a área de cadastro de usuário <br> 4. Preencher os dados necessários (nome, email e senha) <br> 5. Salvar cadastro <br> 6. Clicar em "Login" <br> 7. Informar usuário valido e senha válida <br> 8. Clicar na aba Perfis de Usuário <br> 9. Clicar em adicionar usuário <br> 10. Adicionar o perfil ao usuário (Administrador, Compras, Vendas, Produção) <br> 11. Clicar na aba Produtos <br> 12. Clicar em produção <br> 13. Clicar em Produto acabado ou Matéria príma|
+|Critério de Êxito | Cadastro de matéria prima e produto acabado adicionado com sucesso |
+|  	|  	|
+| **Caso de Teste** 	| **CT-05 – O sistema deve conter uma parte dedicada a relatório de estoque (Cruzando a saída, a entrada e a produção, para relatar quanto há de produto acabado e matéria prima em estoque)** 	|
+|	Requisito Associado 	| RF - 13 -O sistema deve conter uma parte dedicada a relatório de estoque (Cruzando a saída, a entrada e a produção, para relatar quanto há de produto acabado e matéria prima em estoque).|
+| Objetivo do Teste 	| Verificar se o sistema está gerando corretamente o relatório de estoque, considerando as entradas, saídas e produção. . |
+| Passos 	| 1. Acessar o navegador <br> 2. Informar o endereço da aplicação <br> 3. Acessar a área de cadastro de usuário <br> 4. Preencher os dados necessários (nome, email e senha) <br> 5. Salvar cadastro <br> 6. Clicar em "Login" <br> 7. Informar usuário valido e senha válida <br> 8.Navegue até a seção de relatórios de estoque. <br> 9. Solicite o relatório de estoque.|
+|Critério de Êxito | O sistema deve calcular corretamente a quantidade de produto acabado e matéria-prima em estoque, cruzando os dados de entrada, saída e produção. O relatório de estoque deve ser exibido para o usuário, mostrando a quantidade atual de produto acabado e matéria-prima em estoque. |
+|  	|  	|
+| **Caso de Teste** 	| **CT-06 – O sistema deve conter uma parte dedicada a relatório de vendas.** 	|
+|	Requisito Associado 	| RF - 14 -O sistema deve conter uma parte dedicada a relatório de vendas.   .|
+| Objetivo do Teste 	| Verificar se o sistema está gerando corretamente o relatório de vendas, incluindo detalhes como total de vendas, vendas por produto, vendas por região, etc.. |
+| Passos 	| 1. Acessar o navegador <br> 2. Informar o endereço da aplicação <br> 3. Acessar a área de cadastro de usuário <br> 4. Preencher os dados necessários (nome, email e senha) <br> 5. Salvar cadastro <br> 6. Clicar em "Login" <br> 7.Faça login no sistema com um usuário válido que tenha permissões para acessar relatórios de vendas.  <br> 8.Navegue até a seção de relatórios de vendas. <br> 9. Clique no botão ou link para gerar um novo relatório de vendas. <br> 10. Selecione os parâmetros do relatório, como o intervalo de datas para o qual o relatório deve ser gerado. <br> 11. Clique no botão para gerar o relatório com base nos parâmetros selecionados.|
+|Critério de Êxito | 1. O sistema deve calcular corretamente as vendas realizadas, incluindo detalhes como total de vendas, vendas por produto, vendas por região, etc. <br> 2. O relatório de vendas deve ser exibido para o usuário em um formato fácil de entender, como um gráfico ou tabela. <br> 3. O relatório de vendas deve ser preciso e refletir as vendas reais realizadas durante o intervalo de datas selecionado. <br> 4.  O usuário deve ser capaz de exportar o relatório de vendas para um formato de arquivo comum, como PDF ou CSV.   |
 
  
 > **Links Úteis**:

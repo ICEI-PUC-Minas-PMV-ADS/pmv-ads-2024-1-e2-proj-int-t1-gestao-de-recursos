@@ -9,11 +9,8 @@ O estudo evidencia a baixa priorização do investimento em tecnologia para inte
 Diante desse problema, a solução proposta é a criação de uma aplicação que torna parte desse sistema acessível aos empreendedores de baixo capital.
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
+O alto custo de licenças, e de profissionais de análise de sistemas; e a alta curva de aprendizado para o uso dos softwares de gestão convencionais, é prejudicial para pequenos empreendedores que não tem recursos financeiros, ou preparo para a utilização dos tais. 
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
 
 > **Links Úteis**:
 > - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
@@ -22,31 +19,41 @@ Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thin
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+O objetivo deste projeto é entregar um sistema de gerenciamento de recursos que seja acessível financeiramente e em sua usabilidade, incentivando uma melhor gestão para os pequenos empreendedores. 
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
+Objetivos específicos: 
+
+1. Sistema deve ser de simples usabilidade 
+
+1. O projeto deve ser Open Source 
+
+1. Deve conter as funcionalidades de: 
+
+   1. Controle de entrada de produtos/cargas (Matérias primas, ou Produtos de revenda) na empresa. 
+
+   1. Gestão de produção a partir das matérias primas cadastradas. 
+
+   1. Controle de saída de produtos acabados, ou produtos de revenda.  
+
+   1. Gestão de compras, e vendas. 
+
+   1. Geração de relatórios 
+
+ 
  
 > **Links Úteis**:
 > - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+A gestão é um dos aspectos fundamentais para o sucesso de uma empresa. Segundo um estudo feito pela Sebrae (2014) sobre os motivos que levam as pequenas empresas à falência, a falta de gestão está como um dos motivos principais.  
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+Grandes empresas comumente utilizam sistemas de gestão integrados para o controle de suas operações (finanças, estoque, produção etc.) e centralização de dados, para maior otimização dos processos. Ter acesso a uma ferramenta que possibilita o gerenciamento dos recursos e outras áreas do negócio não é uma realidade para a grande maioria dos pequenos empreendedores brasileiros.  
 
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Os sistemas de ERP (Enterprise Resource Planning) são os mais utilizados para gestão de empresas. Ao levantar características de sistemas de gestão ERP, Padilha e Marins (2005) diz, “Eles possuem custos elevados, destacando-se os custos de hardware e infraestrutura computacional, de aquisição da licença de uso do ERP, de treinamento e consultoria para a implantação.” (PADILHA; MARINS, 2005, p. 108).  
+ 
+ Tendo este levantamento em perspectiva, este projeto busca trazer uma solução que facilite a gestão de recursos de pequenos empreendedores, através de um software de gestão acessível financeiramente, de fácil obtenção e uso pela pessoa empresária e demais colaboradores, de forma a contribuir no crescimento e permanência dessas empresas no mercado.
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
-
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
-
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+O público-alvo deste projeto são pessoas empresárias de pequenas empresas e seus funcionários que lidam com departamentos de gestão. Homens e mulheres na faixa etária de 25 a 60 anos, que fazem a gestão dos processos de suas empresas de forma manual e sentem a necessidade de uma ferramenta para auxiliar e facilitar este gerenciamento.  
