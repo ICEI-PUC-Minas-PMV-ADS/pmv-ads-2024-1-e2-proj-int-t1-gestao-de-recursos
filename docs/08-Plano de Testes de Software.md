@@ -45,12 +45,6 @@ Os testes funcionais a serem ralizados no aplicativo são descritos a seguir:
 | Passos 	| 1. Acessar o navegador <br> 2. Informar o endereço da aplicação <br> 3. Acessar a área de cadastro de usuário <br> 4. Preencher os dados necessários (nome, email e senha) <br> 5. Salvar cadastro <br> 6. Clicar em "Login" <br> 7.Tente acessar uma funcionalidade do sistema que requer autenticação.  |
 |Critério de Êxito | 1. O sistema deve autenticar corretamente o usuário com base no nome de usuário e senha fornecidos. <br> 2. Após o login bem-sucedido, o usuário deve ser redirecionado para a página inicial ou painel do sistema. <br> 3. O usuário deve ser capaz de acessar funcionalidades do sistema que requerem autenticação. <br> 4. Se o usuário tentar acessar uma funcionalidade do sistema sem estar logado, o sistema deve redirecioná-lo para a página de login.  |
 |  	|  	|
-| **Caso de Teste** 	| **CT-07 – O usuário deverá estar logado para acessar o sistema.** 	|
-|	Requisito Associado 	| RF - 07 -O usuário deverá estar logado para acessar o sistema.|
-| Objetivo do Teste 	| Verificar se o sistema está permitindo que apenas usuários autenticados acessem o sistema.|
-| Passos 	| 1. Acessar o navegador <br> 2. Informar o endereço da aplicação <br> 3. Acessar a área de cadastro de usuário <br> 4. Preencher os dados necessários (nome, email e senha) <br> 5. Salvar cadastro <br> 6. Clicar em "Login" <br> 7.Tente acessar uma funcionalidade do sistema que requer autenticação.  |
-|Critério de Êxito | 1. O sistema deve autenticar corretamente o usuário com base no nome de usuário e senha fornecidos. <br> 2. Após o login bem-sucedido, o usuário deve ser redirecionado para a página inicial ou painel do sistema. <br> 3. O usuário deve ser capaz de acessar funcionalidades do sistema que requerem autenticação. <br> 4. Se o usuário tentar acessar uma funcionalidade do sistema sem estar logado, o sistema deve redirecioná-lo para a página de login.  |
-|  	|  	|
 | **Caso de Teste** 	| **CT-08 – O usuário só poderá acessar as funcionalidades atribuídas ao seu perfil.** 	|
 |	Requisito Associado 	| RF - 08 -O usuário só poderá acessar as funcionalidades atribuídas ao seu perfil.|
 | Objetivo do Teste 	| Verificar se o sistema está permitindo que os usuários acessem apenas as funcionalidades que foram atribuídas ao seu perfil.|
