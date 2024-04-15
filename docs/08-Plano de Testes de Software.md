@@ -51,13 +51,37 @@ Os testes funcionais a serem ralizados no aplicativo são descritos a seguir:
 | Passos 	| 1. Acessar o navegador <br> 2. Informar o endereço da aplicação <br> 3. Acessar a área de cadastro de usuário <br> 4. Preencher os dados necessários (nome, email e senha) <br> 5. Salvar cadastro <br> 6. Clicar em "Login" <br> 7.Faça login no sistema com um usuário que tenha um perfil específico (por exemplo, "Administrador", "Gerente", "Funcionário", etc.). <br> 8. Tente acessar uma funcionalidade que esteja dentro das permissões do perfil do usuário.<br> 9.Registre se o acesso foi concedido.<br> 10. Tente acessar uma funcionalidade que esteja fora das permissões do perfil do usuário.<br> 11. Registre se o acesso foi negado.  |
 |Critério de Êxito | 1. O sistema deve permitir que o usuário acesse as funcionalidades que estão dentro das permissões do seu perfil. <br> 2. O sistema deve negar o acesso às funcionalidades que estão fora das permissões do perfil do usuário. <br> 3. Se o acesso for negado, o sistema deve fornecer uma mensagem de erro apropriada informando ao usuário que ele não tem permissão para acessar a funcionalidade solicitada. |
 |  	|  	|
-| **Caso de Teste** 	| **CT-09 – O sistema deve conter uma parte dedicada a relatório de estoque (Cruzando a saída, a entrada e a produção, para relatar quanto há de produto acabado e matéria prima em estoque)** 	|
+| **Caso de Teste** 	| **CT-09 –  O usuário Administrador deve ter todo o controle de usuários e seus perfis.** 	|
+|	Requisito Associado 	| RF - 09 - O usuário Administrador deve ter todo o controle de usuários e seus perfis. |
+| Objetivo do Teste 	| Verificar se O usuário Administrador tem todo o controle de usuários e seus perfis.|
+| Passos 	| 1. Acessar o navegador <br> 2. Informar o endereço da aplicação <br> 3. Acessar a área de cadastro de usuário <br> 4. Preencher os dados necessários (nome, email e senha) <br> 5. Atribuir um perfil para o usuário <br> 6. Salvar o cadastro   |
+|Critério de Êxito | 1. O sistema deve permitir que o usuário Administrador cadastre novos usuários e atribua um perfil a eles |
+|  	|  	|
+| **Caso de Teste** 	| **CT-10 – O sistema deve conter cadastro de listas técnicas.** 	|
+|	Requisito Associado 	| RF - 10 - O sistema deve conter cadastro de listas técnicas.|
+| Objetivo do Teste 	| Verificar se o sistema contem cadastros de listas tecnicas|
+| Passos 	| 1. Acessar o navegador <br> 2. Informar o endereço da aplicação <br> 3. Clicar em "Login" <br> 4. Faça login no sistema com um usuário que tenha um perfil que permita cadastro de listas tecnicas. <br> 5. acesse a aba de cadastros de listas tecnicas. <br> 6. Preencha as informações. <br> 7. Salve o cadastro |
+|Critério de Êxito | 1. O sistema deve permitir que o usuário que tem essa permissão cadastre novas listas tecnicas. <br> 2. O sistema não deve mostrar a aba de listas tecincas para quem não tem esta permissão atribuida ao seu perfil |
+|  	|  	|
+| **Caso de Teste** 	| **CT-11 – O usuário só poderá acessar as funcionalidades atribuídas ao seu perfil.** 	|
+|	Requisito Associado 	| RF - 11 - O sistema deve ter lançamento de produção.|
+| Objetivo do Teste 	| Verificar se o sistema contem lançamentos de produção|
+| Passos 	| 1. Acessar o navegador <br> 2. Informar o endereço da aplicação <br> 3. Clicar em "Login" <br> 4. Faça login no sistema com um usuário que tenha um perfil que permita cadastro de listas tecnicas. <br> 5. acesse a aba de lançamentos de produção. <br> 6. Preencha as informações. <br> 7. Salve o lançamento  |
+|Critério de Êxito | 1. O sistema deve permitir que o usuário que tem essa permissão lance novas produções. <br> 2. O sistema não deve mostrar a aba de lançamentos de produção para quem não tem esta permissão atribuida ao seu perfil |
+|  	|  	|
+| **Caso de Teste** 	| **CT-12 – O sistema deve ter cadastro de fornecedores.** 	|
+|	Requisito Associado 	| RF - 12 -O sistema deve ter cadastro de fornecedores.|
+| Objetivo do Teste 	| Verificar se o sistema está contem cadastro de fornecedores.|
+| Passos 	| 1. Acessar o navegador <br> 2. Informar o endereço da aplicação <br> 3. Clicar em "Login" <br> 4. Faça login no sistema com um usuário que tenha um perfil que permita cadastro de fornecedores. <br> 5. acesse a aba de cadastros de fornecedores. <br> 6. Preencha as informações. <br> 7. Salve o cadastro  |
+|Critério de Êxito |  1. O sistema deve permitir que o usuário que tenha essa permissão cadastre novos fornecedores. <br> 2. O sistema não deve mostrar a aba de fornecedores para quem não tem esta permissão atribuida ao seu perfil |
+|  	|  	|
+| **Caso de Teste** 	| **CT-013 – O sistema deve conter uma parte dedicada a relatório de estoque (Cruzando a saída, a entrada e a produção, para relatar quanto há de produto acabado e matéria prima em estoque)** 	|
 |	Requisito Associado 	| RF - 13 -O sistema deve conter uma parte dedicada a relatório de estoque (Cruzando a saída, a entrada e a produção, para relatar quanto há de produto acabado e matéria prima em estoque).|
 | Objetivo do Teste 	| Verificar se o sistema está gerando corretamente o relatório de estoque, considerando as entradas, saídas e produção. . |
 | Passos 	| 1. Acessar o navegador <br> 2. Informar o endereço da aplicação <br> 3. Acessar a área de cadastro de usuário <br> 4. Preencher os dados necessários (nome, email e senha) <br> 5. Salvar cadastro <br> 6. Clicar em "Login" <br> 7. Informar usuário valido e senha válida <br> 8.Navegue até a seção de relatórios de estoque. <br> 9. Solicite o relatório de estoque.|
 |Critério de Êxito | O sistema deve calcular corretamente a quantidade de produto acabado e matéria-prima em estoque, cruzando os dados de entrada, saída e produção. O relatório de estoque deve ser exibido para o usuário, mostrando a quantidade atual de produto acabado e matéria-prima em estoque. |
 |  	|  	|
-| **Caso de Teste** 	| **CT-10 – O sistema deve conter uma parte dedicada a relatório de vendas.** 	|
+| **Caso de Teste** 	| **CT-14 – O sistema deve conter uma parte dedicada a relatório de vendas.** 	|
 |	Requisito Associado 	| RF - 14 -O sistema deve conter uma parte dedicada a relatório de vendas.   .|
 | Objetivo do Teste 	| Verificar se o sistema está gerando corretamente o relatório de vendas, incluindo detalhes como total de vendas, vendas por produto, vendas por região, etc.. |
 | Passos 	| 1. Acessar o navegador <br> 2. Informar o endereço da aplicação <br> 3. Acessar a área de cadastro de usuário <br> 4. Preencher os dados necessários (nome, email e senha) <br> 5. Salvar cadastro <br> 6. Clicar em "Login" <br> 7.Faça login no sistema com um usuário válido que tenha permissões para acessar relatórios de vendas.  <br> 8.Navegue até a seção de relatórios de vendas. <br> 9. Clique no botão ou link para gerar um novo relatório de vendas. <br> 10. Selecione os parâmetros do relatório, como o intervalo de datas para o qual o relatório deve ser gerado. <br> 11. Clique no botão para gerar o relatório com base nos parâmetros selecionados.|
