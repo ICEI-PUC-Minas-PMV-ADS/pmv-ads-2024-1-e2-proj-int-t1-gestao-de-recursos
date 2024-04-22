@@ -7,7 +7,7 @@ public class Produto
     public int TipoProdutoId { get; set; }
     public TipoProduto TipoProduto { get; set; }
     public bool Ativo { get; set; }
-    public DateTime DataCriacao { get; set; } = DateTime.Now;
-    public DateTime DataAlteracao { get; set; }
+    public DateTime? DataCriacao { get; set; }
+    public DateTime? DataAlteracao { get; set; }
 
 }
