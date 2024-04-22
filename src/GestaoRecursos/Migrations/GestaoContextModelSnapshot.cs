@@ -231,10 +231,10 @@ namespace GestaoRecursos.Migrations
                     b.Property<bool>("Ativo")
                         .HasColumnType("bit");
 
-                    b.Property<DateTime>("DataAlteracao")
+                    b.Property<DateTime?>("DataAlteracao")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("DataCriacao")
+                    b.Property<DateTime?>("DataCriacao")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Nome")
