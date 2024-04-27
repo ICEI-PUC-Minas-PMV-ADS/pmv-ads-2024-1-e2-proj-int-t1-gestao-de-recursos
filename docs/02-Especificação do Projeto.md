@@ -136,7 +136,8 @@ Diagrama de casos de uso de um sistema de gestão de recursos.
 
 
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/65174193/909b5f4a-f943-4608-887d-5f776cde956d)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/65174193/502aa15b-0117-4dd6-9794-dc8708a84496)
+
 
 
 
