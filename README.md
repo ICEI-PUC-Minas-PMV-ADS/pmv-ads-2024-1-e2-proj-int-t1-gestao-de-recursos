@@ -11,9 +11,11 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 ## Integrantes
 
 - Tomaz Martins Pereira Pontes 
-* Renê Matias de Misquita
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+- Renê Matias de Misquita
+- Marcos Vinicio Araújo Almeida
+- Jessica Hora dos Santos
+- Nico Rocha da Costa
+- Thiago Bastani Pontel
 
 ## Orientador
 

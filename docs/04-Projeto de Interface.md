@@ -22,15 +22,32 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas d
 
 ## Wireframes
 
-![Exemplo de Wireframe](img/wireframe-example.png)
-
 São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
- 
-> **Links Úteis**:
-> - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [Axure](https://www.axure.com/edu) (Licença Educacional)
-> - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
+
+O protótipo foi separado em diferentes perfis de acesso, apresentando suas principais funcionalidades. 
+
+### Autenticação
+![AUTENTICAÇÃO](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/99574248/0e1e0a82-5c7d-4793-875d-1624062fd88a)
+
+### Administrador
+![ADMINISTRADOR](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/99574248/ad979267-6e72-497f-97eb-3def9a81aa88)
+
+### Comprador
+![COMPRADOR](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/99574248/1b9bebf9-2c97-44a0-a403-6ad731026851)
+
+### Vendedor
+![VENDEDOR](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/99574248/6414721a-6486-4ddc-84d5-2b8143806497)
+
+### Produção
+![PRODUÇÃO](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/99574248/bbc48209-f9dd-441c-a1c7-515c8bea41c3)
+
+### Entrada 
+![ENTRADA](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/99574248/dd026069-8754-4fb3-8f9f-e60c592491aa)
+
+### Saída 
+![SAÍDA](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/99574248/828284f3-dd25-4741-85d1-68e987af41d7)
+
+### Modelos de formulários (Criar, Editar)
+![MODELO DE FORMS DO CRUD](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/99574248/6a43e16d-49c8-4c5c-99fd-736393fbcd7c)
+
+

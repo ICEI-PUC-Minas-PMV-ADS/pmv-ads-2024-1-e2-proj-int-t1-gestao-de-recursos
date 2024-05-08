@@ -86,8 +86,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 | ID   | Descrição                                                            | Prioridade |
 |------|----------------------------------------------------------------------|------------|
-| RF-01| O sistema deve conter cadastro de perfis de usuário.                 | Média      |
-| RF-02| O sistema deve conter cadastro de usuários.                          | Alta       |
+| RF-01| O sistema deve conter cadastros e logins de usuários.                  | Média      |
+| RF-02|  O sistema deve conter cadastro de perfis de usuário.                        | Alta       |
 | RF-03| O usuário deve ter um perfil atribuído a ele.                        | Média      |
 | RF-04| O sistema deve conter cadastros de matéria prima e produto acabado. | Alta       |
 | RF-05| O sistema deve conter lançamentos de movimentações de mercadoria.    | Alta       |
@@ -136,7 +136,9 @@ Diagrama de casos de uso de um sistema de gestão de recursos.
 
 
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/65174193/80e3fcd4-32d8-4aa2-8fa3-1eb001f09f7b)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/65174193/502aa15b-0117-4dd6-9794-dc8708a84496)
+
+
 
 
 

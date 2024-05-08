@@ -8,11 +8,8 @@
 
 O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.
 
-Sugestão de ferramentas para geração deste artefato: LucidChart e Draw.io.
+![Flowchart - Frame 1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/99574248/ff8b37df-df1d-4a5c-98f8-e8849f78b8fb)
 
-A referência abaixo irá auxiliá-lo na geração do artefato “Modelo ER”.
-
-> - [Como fazer um diagrama entidade relacionamento | Lucidchart](https://www.lucidchart.com/pages/pt/como-fazer-um-diagrama-entidade-relacionamento)
 
 ## Projeto da Base de Dados
 
@@ -22,13 +19,22 @@ Para mais informações, consulte o microfundamento "Modelagem de Dados".
 
 ## Tecnologias Utilizadas
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
+A tecnologia utilizada foi o banco de dados SQL Server do azure cloud.
 
 Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
 
 ## Hospedagem
 
-Explique como a hospedagem e o lançamento da plataforma foi feita.
+### Banco de dados
+
+O banco de dados está hospedado no Azure Cloud (SQL Srver)
+
+![](img/print-azure.png)
+
+#### Tabelas
+![](img/print-tabelas.png)
+
+Link de acesso: https://portal.azure.com/#@sgapucminasbr.onmicrosoft.com/resource/subscriptions/6883d23a-4719-4ba7-97f6-6735818664ec/resourceGroups/gestao_de_recursos/providers/Microsoft.Sql/servers/gestao-de-recursos/databases/gest%C3%A3o%20de%20recursos/queryEditor
 
 > **Links Úteis**:
 >
