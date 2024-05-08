@@ -6,9 +6,13 @@ using Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddRazorPages().AddRazorRuntimeCompilation();  
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+    
+
+
 //db context
 builder.Services.AddDbContext<GestaoContext>(options =>
     options.UseSqlServer(
