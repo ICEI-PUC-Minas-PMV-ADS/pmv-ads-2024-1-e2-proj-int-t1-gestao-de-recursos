@@ -14,6 +14,7 @@ public class GestaoContext : IdentityDbContext
     public DbSet<TipoProduto> TipoProdutos { get; set; }
     public DbSet<Produto> Produtos { get; set; }
     public DbSet<Venda> Vendas { get; set; }
+    public DbSet<Compra> Compra { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
