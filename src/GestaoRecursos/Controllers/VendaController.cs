@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Context;
-using GestaoRecursos.Models;
+using Models;
 
 namespace GestaoRecursos.Controllers
 {
@@ -22,7 +22,8 @@ namespace GestaoRecursos.Controllers
         // GET: Venda
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Venda.ToListAsync());
+            var gestaoContext = _context.Vendas.Include(v => v.Produto);
+            return View(await gestaoContext.ToListAsync());
         }
 
         // GET: Venda/Details/5
@@ -33,7 +34,8 @@ namespace GestaoRecursos.Controllers
                 return NotFound();
             }
 
-            var venda = await _context.Venda
+            var venda = await _context.Vendas
+                .Include(v => v.Produto)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (venda == null)
             {
@@ -46,6 +48,7 @@ namespace GestaoRecursos.Controllers
         // GET: Venda/Create
         public IActionResult Create()
         {
+            ViewData["ProdutoId"] = new SelectList(_context.Produtos, "Id", "Nome");
             return View();
         }
 
@@ -54,13 +57,15 @@ namespace GestaoRecursos.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,NotaFiscal,Ativo,DataCriacao,DataAlteracao")] Venda venda)
+        public async Task<IActionResult> Create([Bind("Id,ProdutoId,NotaFiscal,Ativo,DataCriacao,DataAlteracao,Quantidade")] Venda venda)
         {
-            venda.DataCriacao = DateTime.Now;
-            venda.DataAlteracao = DateTime.Now;
-            _context.Add(venda);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+                venda.DataCriacao = DateTime.Now;
+                venda.DataAlteracao = DateTime.Now;
+                venda.Ativo = true;
+                _context.Add(venda);
+                await _context.SaveChangesAsync();
+                ViewData["ProdutoId"] = new SelectList(_context.Produtos, "Id", "Nome", venda.ProdutoId);
+                return RedirectToAction(nameof(Index));
         }
 
         // GET: Venda/Edit/5
@@ -71,11 +76,13 @@ namespace GestaoRecursos.Controllers
                 return NotFound();
             }
 
-            var venda = await _context.Venda.FindAsync(id);
+            var venda = await _context.Vendas.FindAsync(id);
             if (venda == null)
             {
                 return NotFound();
             }
+            ViewData["ProdutoId"] = new SelectList(_context.Produtos, "Id", "Nome", venda.ProdutoId);
+
             return View(venda);
         }
 
@@ -84,30 +91,33 @@ namespace GestaoRecursos.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,NotaFiscal,Ativo,DataCriacao,DataAlteracao")] Venda venda)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,ProdutoId,NotaFiscal,Ativo,DataCriacao,DataAlteracao,Quantidade")] Venda venda)
         {
-            venda.DataAlteracao = DateTime.Now;
             if (id != venda.Id)
             {
                 return NotFound();
             }
 
-            try
-            {
-                _context.Update(venda);
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!VendaExists(venda.Id))
+                try
                 {
-                    return NotFound();
+                    venda.DataAlteracao = DateTime.Now;
+                    _context.Update(venda);
+                    await _context.SaveChangesAsync();
                 }
-                else
+                catch (DbUpdateConcurrencyException)
                 {
-                    throw;
+                    if (!VendaExists(venda.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
                 }
-            }
+
+                ViewData["ProdutoId"] = new SelectList(_context.Produtos, "Id", "Nome", venda.ProdutoId);
+
             return RedirectToAction(nameof(Index));
         }
 
@@ -119,7 +129,8 @@ namespace GestaoRecursos.Controllers
                 return NotFound();
             }
 
-            var venda = await _context.Venda
+            var venda = await _context.Vendas
+                .Include(v => v.Produto)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (venda == null)
             {
@@ -134,10 +145,10 @@ namespace GestaoRecursos.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var venda = await _context.Venda.FindAsync(id);
+            var venda = await _context.Vendas.FindAsync(id);
             if (venda != null)
             {
-                _context.Venda.Remove(venda);
+                _context.Vendas.Remove(venda);
             }
 
             await _context.SaveChangesAsync();
@@ -146,7 +157,7 @@ namespace GestaoRecursos.Controllers
 
         private bool VendaExists(int id)
         {
-            return _context.Venda.Any(e => e.Id == id);
+            return _context.Vendas.Any(e => e.Id == id);
         }
     }
 }

@@ -9,5 +9,7 @@ public class Produto
     public bool Ativo { get; set; }
     public DateTime? DataCriacao { get; set; }
     public DateTime? DataAlteracao { get; set; }
+    public List<Venda> Vendas { get; set; }
+    public List<Compra> Compras { get; set; }
 
 }

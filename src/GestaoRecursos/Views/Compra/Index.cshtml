@@ -1,4 +1,4 @@
-﻿@model IEnumerable<GestaoRecursos.Models.Compra>
+@model IEnumerable<Models.Compra>
 
 @{
     ViewData["Title"] = "Index";
@@ -12,6 +12,9 @@
 <table class="table">
     <thead>
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Produto.Nome)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Ativo)
             </th>
@@ -30,6 +33,9 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Produto.Nome)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Ativo)
             </td>

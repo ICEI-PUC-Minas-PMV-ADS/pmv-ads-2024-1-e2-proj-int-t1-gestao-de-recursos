@@ -4,6 +4,7 @@ using Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GestaoRecursos.Migrations
 {
     [DbContext(typeof(GestaoContext))]
-    partial class GestaoContextModelSnapshot : ModelSnapshot
+    [Migration("20240507225029_add_relation_venda_produto")]
+    partial class add_relation_venda_produto
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -237,15 +240,10 @@ namespace GestaoRecursos.Migrations
                     b.Property<DateTime?>("DataCriacao")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("ProdutoId")
-                        .HasColumnType("int");
-
                     b.Property<int>("Quantidade")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ProdutoId");
 
                     b.ToTable("Compra");
                 });
@@ -261,6 +259,9 @@ namespace GestaoRecursos.Migrations
                     b.Property<bool>("Ativo")
                         .HasColumnType("bit");
 
+                    b.Property<int?>("CompraId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime?>("DataAlteracao")
                         .HasColumnType("datetime2");
 
@@ -275,6 +276,8 @@ namespace GestaoRecursos.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CompraId");
 
                     b.HasIndex("TipoProdutoId");
 
@@ -319,17 +322,24 @@ namespace GestaoRecursos.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ProdutoId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Quantidade")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("ProdutoId");
-
                     b.ToTable("Venda");
+                });
+
+            modelBuilder.Entity("ProdutoVenda", b =>
+                {
+                    b.Property<int>("ProdutosId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("VendasId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ProdutosId", "VendasId");
+
+                    b.HasIndex("VendasId");
+
+                    b.ToTable("ProdutoVenda");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -383,19 +393,12 @@ namespace GestaoRecursos.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Models.Compra", b =>
-                {
-                    b.HasOne("Models.Produto", "Produto")
-                        .WithMany("Compras")
-                        .HasForeignKey("ProdutoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Produto");
-                });
-
             modelBuilder.Entity("Models.Produto", b =>
                 {
+                    b.HasOne("Models.Compra", null)
+                        .WithMany("Produtos")
+                        .HasForeignKey("CompraId");
+
                     b.HasOne("Models.TipoProduto", "TipoProduto")
                         .WithMany("Produtos")
                         .HasForeignKey("TipoProdutoId")
@@ -405,22 +408,24 @@ namespace GestaoRecursos.Migrations
                     b.Navigation("TipoProduto");
                 });
 
-            modelBuilder.Entity("Models.Venda", b =>
+            modelBuilder.Entity("ProdutoVenda", b =>
                 {
-                    b.HasOne("Models.Produto", "Produto")
-                        .WithMany("Vendas")
-                        .HasForeignKey("ProdutoId")
+                    b.HasOne("Models.Produto", null)
+                        .WithMany()
+                        .HasForeignKey("ProdutosId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Produto");
+                    b.HasOne("Models.Venda", null)
+                        .WithMany()
+                        .HasForeignKey("VendasId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
-            modelBuilder.Entity("Models.Produto", b =>
+            modelBuilder.Entity("Models.Compra", b =>
                 {
-                    b.Navigation("Compras");
-
-                    b.Navigation("Vendas");
+                    b.Navigation("Produtos");
                 });
 
             modelBuilder.Entity("Models.TipoProduto", b =>

@@ -1,4 +1,4 @@
-﻿@model GestaoRecursos.Models.Venda
+@model Models.Venda
 
 @{
     ViewData["Title"] = "Details";
@@ -10,6 +10,18 @@
     <h4>Venda</h4>
     <hr />
     <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Produto.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Produto.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Quantidade)
+        </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.NotaFiscal)
         </dt>

@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Context;
-using GestaoRecursos.Models;
+using Models;
 
 namespace GestaoRecursos.Controllers
 {
@@ -22,7 +22,8 @@ namespace GestaoRecursos.Controllers
         // GET: Compra
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Compra.ToListAsync());
+            var gestaoContext = _context.Compra.Include(c => c.Produto);
+            return View(await gestaoContext.ToListAsync());
         }
 
         // GET: Compra/Details/5
@@ -34,6 +35,7 @@ namespace GestaoRecursos.Controllers
             }
 
             var compra = await _context.Compra
+                .Include(c => c.Produto)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (compra == null)
             {
@@ -46,6 +48,7 @@ namespace GestaoRecursos.Controllers
         // GET: Compra/Create
         public IActionResult Create()
         {
+            ViewData["ProdutoId"] = new SelectList(_context.Produtos, "Id", "Nome");
             return View();
         }
 
@@ -54,13 +57,16 @@ namespace GestaoRecursos.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Ativo,DataCriacao,DataAlteracao,Quantidade")] Compra compra)
+        public async Task<IActionResult> Create([Bind("Id,ProdutoId,Ativo,DataCriacao,DataAlteracao,Quantidade")] Compra compra)
         {
-            compra.DataCriacao = DateTime.Now;
-            compra.DataAlteracao = DateTime.Now;
-            _context.Add(compra);
+                compra.DataCriacao = DateTime.Now;
+                compra.DataAlteracao = DateTime.Now;
+                compra.Ativo = true;
+                 _context.Add(compra);
                 await _context.SaveChangesAsync();
+                ViewData["ProdutoId"] = new SelectList(_context.Produtos, "Id", "Nome", compra.ProdutoId);
                 return RedirectToAction(nameof(Index));
+
         }
 
         // GET: Compra/Edit/5
@@ -76,6 +82,7 @@ namespace GestaoRecursos.Controllers
             {
                 return NotFound();
             }
+            ViewData["ProdutoId"] = new SelectList(_context.Produtos, "Id", "Nome", compra.ProdutoId);
             return View(compra);
         }
 
@@ -84,9 +91,8 @@ namespace GestaoRecursos.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Ativo,DataCriacao,DataAlteracao,Quantidade")] Compra compra)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,ProdutoId,Ativo,DataCriacao,DataAlteracao,Quantidade")] Compra compra)
         {
-            compra.DataAlteracao = DateTime.Now;
             if (id != compra.Id)
             {
                 return NotFound();
@@ -94,6 +100,7 @@ namespace GestaoRecursos.Controllers
 
             try
             {
+                compra.DataAlteracao = DateTime.Now;
                 _context.Update(compra);
                 await _context.SaveChangesAsync();
             }
@@ -108,9 +115,10 @@ namespace GestaoRecursos.Controllers
                     throw;
                 }
             }
-                return RedirectToAction(nameof(Index));
 
-            }
+            ViewData["ProdutoId"] = new SelectList(_context.Produtos, "Id", "Nome", compra.ProdutoId);
+            return RedirectToAction(nameof(Index));
+        }
 
         // GET: Compra/Delete/5
         public async Task<IActionResult> Delete(int? id)
@@ -121,6 +129,7 @@ namespace GestaoRecursos.Controllers
             }
 
             var compra = await _context.Compra
+                .Include(c => c.Produto)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (compra == null)
             {

@@ -1,4 +1,4 @@
-﻿@model GestaoRecursos.Models.Venda
+@model Models.Venda
 
 @{
     ViewData["Title"] = "Edit";
@@ -14,6 +14,16 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
+                <label asp-for="ProdutoId" class="control-label"></label>
+                <select asp-for="ProdutoId" class="form-control" asp-items="ViewBag.ProdutoId"></select>
+                <span asp-validation-for="ProdutoId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quantidade" class="control-label"></label>
+                <input asp-for="Quantidade" class="form-control" />
+                <span asp-validation-for="Quantidade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="NotaFiscal" class="control-label"></label>
                 <input asp-for="NotaFiscal" class="form-control" />
                 <span asp-validation-for="NotaFiscal" class="text-danger"></span>
@@ -23,7 +33,12 @@
                     <input class="form-check-input" asp-for="Ativo" /> @Html.DisplayNameFor(model => model.Ativo)
                 </label>
             </div>
-          
+            <div class="form-group">
+                <input type="hidden" asp-for="DataCriacao" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="hidden" asp-for="DataAlteracao" class="form-control" />
+            </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
