@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace GestaoRecursos.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Admin, Producao, Compra")]
     public class TipoProdutoController : Controller
     {
         private readonly GestaoContext _context;
