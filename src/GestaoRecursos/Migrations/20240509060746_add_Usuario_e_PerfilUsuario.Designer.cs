@@ -4,6 +4,7 @@ using Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GestaoRecursos.Migrations
 {
     [DbContext(typeof(GestaoContext))]
-    partial class GestaoContextModelSnapshot : ModelSnapshot
+    [Migration("20240509060746_add_Usuario_e_PerfilUsuario")]
+    partial class add_Usuario_e_PerfilUsuario
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -88,7 +91,7 @@ namespace GestaoRecursos.Migrations
 
                     b.HasIndex("PerfilUsuarioId");
 
-                    b.ToTable("Usuarios", (string)null);
+                    b.ToTable("Usuarios");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -316,7 +319,7 @@ namespace GestaoRecursos.Migrations
 
                     b.HasIndex("ProdutoId");
 
-                    b.ToTable("Compra", (string)null);
+                    b.ToTable("Compra");
                 });
 
             modelBuilder.Entity("Models.Produto", b =>
@@ -347,7 +350,7 @@ namespace GestaoRecursos.Migrations
 
                     b.HasIndex("TipoProdutoId");
 
-                    b.ToTable("Produtos", (string)null);
+                    b.ToTable("Produtos");
                 });
 
             modelBuilder.Entity("Models.TipoProduto", b =>
@@ -364,7 +367,7 @@ namespace GestaoRecursos.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("TipoProdutos", (string)null);
+                    b.ToTable("TipoProdutos");
                 });
 
             modelBuilder.Entity("Models.Venda", b =>
@@ -398,7 +401,7 @@ namespace GestaoRecursos.Migrations
 
                     b.HasIndex("ProdutoId");
 
-                    b.ToTable("Venda", (string)null);
+                    b.ToTable("Venda");
                 });
 
             modelBuilder.Entity("GestaoRecursos.Models.Usuario", b =>

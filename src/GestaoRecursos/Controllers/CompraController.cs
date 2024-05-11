@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Context;
 using Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace GestaoRecursos.Controllers
 {
+    [Authorize(Roles = "Admin, Compra")]
     public class CompraController : Controller
     {
         private readonly GestaoContext _context;

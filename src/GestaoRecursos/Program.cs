@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Services;
+using GestaoRecursos.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -36,6 +37,29 @@ builder.Services.AddSingleton<IEmailSender, NullEmailSenderService>();
 
 var app = builder.Build();
 
+//Criar um escopo de serviço para configurar roles
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    try
+    {
+        var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
+        string[] roleNames = Enum.GetNames(typeof(Perfil));
+        foreach (var roleName in roleNames)
+        {
+            var roleExist = await roleManager.RoleExistsAsync(roleName);
+            if (!roleExist)
+            {
+                await roleManager.CreateAsync(new IdentityRole(roleName));
+            }
+        }
+    }
+    catch (Exception ex)
+    {
+        var logger = services.GetRequiredService<ILogger<Program>>();
+        logger.LogError(ex, "Ocorreu um erro ao criar os roles");
+    }
+}
 
 app.UseRouting();
 

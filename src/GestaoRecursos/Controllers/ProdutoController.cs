@@ -48,6 +48,7 @@ namespace GestaoRecursos.Controllers
         }
 
         // GET: Produto/Create
+        [Authorize(Roles = "Admin, Producao, Compra")]
         public IActionResult Create()
         {
             ViewData["TipoProdutoId"] = new SelectList(_context.TipoProdutos, "Id", "Nome");
@@ -59,6 +60,7 @@ namespace GestaoRecursos.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin, Producao, Compra")]
         public async Task<IActionResult> Create([Bind("Id,Nome,TipoProdutoId,Ativo,DataCriacao,DataAlteracao")] Produto produto)
         {
             produto.DataCriacao = DateTime.Now;
@@ -74,6 +76,7 @@ namespace GestaoRecursos.Controllers
         }
 
         // GET: Produto/Edit/5
+        [Authorize(Roles = "Admin, Producao, Compra")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -95,6 +98,7 @@ namespace GestaoRecursos.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin, Producao, Compra")]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,TipoProdutoId,Ativo,DataAlteracao")] Produto produto)
         {
             if (id != produto.Id)
@@ -125,6 +129,7 @@ namespace GestaoRecursos.Controllers
         }
 
         // GET: Produto/Delete/5
+        [Authorize(Roles = "Admin, Producao, Compra")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -146,6 +151,7 @@ namespace GestaoRecursos.Controllers
         // POST: Produto/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin, Producao, Compra")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var produto = await _context.Produtos.FindAsync(id);

@@ -6,29 +6,34 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Context;
-using Models;
+using GestaoRecursos.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Authorization;
+using Humanizer;
+using Microsoft.AspNetCore.Components.Forms;
 
 namespace GestaoRecursos.Controllers
 {
     [Authorize(Roles = "Admin")]
-    public class RelatoriosController : Controller
+    public class PerfilUsuariosController : Controller
     {
         private readonly GestaoContext _context;
+        private readonly RoleManager<IdentityRole> _roleManager;
 
-        public RelatoriosController(GestaoContext context)
+        public PerfilUsuariosController(GestaoContext context, RoleManager<IdentityRole> roleManager)
         {
             _context = context;
+            _roleManager = roleManager;
         }
 
-        // GET: Produtos
+        // GET: PerfilUsuarios
         public async Task<IActionResult> Index()
         {
-            var gestaoContext = _context.Produtos.Include(p => p.TipoProduto);
-            return View(await gestaoContext.ToListAsync());
+            return View(await _context.PerfilUsuarios.ToListAsync());
         }
 
-        // GET: Produtos/Details/5
+        // GET: PerfilUsuarios/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -36,42 +41,50 @@ namespace GestaoRecursos.Controllers
                 return NotFound();
             }
 
-            var produto = await _context.Produtos
-                .Include(p => p.TipoProduto)
+            var perfilUsuario = await _context.PerfilUsuarios
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (produto == null)
+            if (perfilUsuario == null)
             {
                 return NotFound();
             }
-
-            return View(produto);
+            return View(perfilUsuario);
         }
 
-        // GET: Produtos/Create
+        // GET: PerfilUsuarios/Create
         public IActionResult Create()
         {
-            ViewData["TipoProdutoId"] = new SelectList(_context.TipoProdutos, "Id", "Id");
+            ViewData["RoleId"] = new SelectList(_roleManager.Roles, "Id", "Name").Prepend(new SelectListItem
+            {
+                Text = "Selecione",
+                Value = "",
+                Disabled = true,
+                Selected = true
+            }); 
             return View();
         }
 
-        // POST: Produtos/Create
+        // POST: PerfilUsuarios/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,TipoProdutoId,Ativo,DataCriacao,DataAlteracao")] Produto produto)
+        public async Task<IActionResult> Create([Bind("NomePerfil,Id,RoleId,Ativo,DataCriacao,DataAlteracao")] PerfilUsuario perfilUsuario)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(produto);
+                perfilUsuario.Ativo = true;
+                perfilUsuario.DataCriacao = DateTime.Now;
+                perfilUsuario.DataAlteracao = DateTime.Now;
+
+                _context.Add(perfilUsuario);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["TipoProdutoId"] = new SelectList(_context.TipoProdutos, "Id", "Id", produto.TipoProdutoId);
-            return View(produto);
+            ViewData["RoleId"] = new SelectList(_roleManager.Roles, "Id", "Name", perfilUsuario.RoleId);
+            return View(perfilUsuario);
         }
 
-        // GET: Produtos/Edit/5
+        // GET: PerfilUsuarios/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -79,23 +92,24 @@ namespace GestaoRecursos.Controllers
                 return NotFound();
             }
 
-            var produto = await _context.Produtos.FindAsync(id);
-            if (produto == null)
+            var perfilUsuario = await _context.PerfilUsuarios.FindAsync(id);
+            if (perfilUsuario == null)
             {
                 return NotFound();
             }
-            ViewData["TipoProdutoId"] = new SelectList(_context.TipoProdutos, "Id", "Id", produto.TipoProdutoId);
-            return View(produto);
+
+            ViewData["RoleId"] = new SelectList(_roleManager.Roles, "Id", "Name", perfilUsuario.RoleId);
+            return View(perfilUsuario);
         }
 
-        // POST: Produtos/Edit/5
+        // POST: PerfilUsuarios/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,TipoProdutoId,Ativo,DataCriacao,DataAlteracao")] Produto produto)
+        public async Task<IActionResult> Edit(int id, [Bind("NomePerfil,Id,RoleId,Ativo,DataCriacao,DataAlteracao")] PerfilUsuario perfilUsuario)
         {
-            if (id != produto.Id)
+            if (id != perfilUsuario.Id)
             {
                 return NotFound();
             }
@@ -104,12 +118,14 @@ namespace GestaoRecursos.Controllers
             {
                 try
                 {
-                    _context.Update(produto);
+                    perfilUsuario.DataAlteracao = DateTime.Now;
+
+                    _context.Update(perfilUsuario);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ProdutoExists(produto.Id))
+                    if (!PerfilUsuarioExists(perfilUsuario.Id))
                     {
                         return NotFound();
                     }
@@ -120,11 +136,11 @@ namespace GestaoRecursos.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["TipoProdutoId"] = new SelectList(_context.TipoProdutos, "Id", "Id", produto.TipoProdutoId);
-            return View(produto);
+            ViewData["RoleId"] = new SelectList(_roleManager.Roles, "Id", "Name", perfilUsuario.RoleId);
+            return View(perfilUsuario);
         }
 
-        // GET: Produtos/Delete/5
+        // GET: PerfilUsuarios/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -132,35 +148,34 @@ namespace GestaoRecursos.Controllers
                 return NotFound();
             }
 
-            var produto = await _context.Produtos
-                .Include(p => p.TipoProduto)
+            var perfilUsuario = await _context.PerfilUsuarios
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (produto == null)
+            if (perfilUsuario == null)
             {
                 return NotFound();
             }
 
-            return View(produto);
+            return View(perfilUsuario);
         }
 
-        // POST: Produtos/Delete/5
+        // POST: PerfilUsuarios/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var produto = await _context.Produtos.FindAsync(id);
-            if (produto != null)
+            var perfilUsuario = await _context.PerfilUsuarios.FindAsync(id);
+            if (perfilUsuario != null)
             {
-                _context.Produtos.Remove(produto);
+                _context.PerfilUsuarios.Remove(perfilUsuario);
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ProdutoExists(int id)
+        private bool PerfilUsuarioExists(int id)
         {
-            return _context.Produtos.Any(e => e.Id == id);
+            return _context.PerfilUsuarios.Any(e => e.Id == id);
         }
     }
 }
