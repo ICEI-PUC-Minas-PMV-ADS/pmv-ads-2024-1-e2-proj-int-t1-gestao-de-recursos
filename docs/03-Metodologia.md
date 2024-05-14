@@ -47,21 +47,16 @@ Coloque  informações sobre detalhes da implementação do Scrum seguido pelo g
 > - [Tutorial Slack](https://slack.com/intl/en-br/)
 
 ### Ferramentas
-
 As ferramentas empregadas no projeto são:
 
-- Editor de código.
-- Ferramentas de comunicação
-- Ferramentas de desenho de tela (_wireframing_)
+- **Gerenciamento de Tarefas:** GitHub
+- **Editor de Código:** Visual Code
+- **Banco de Dados:** SQL Server
+- **Ferramentas de Comunicação:** Whatsapp e Teams
+- **Ferramentas do Diagrama de Classes:** lucidchart
 
 O editor de código foi escolhido porque ele possui uma integração com o
 sistema de versão. As ferramentas de comunicação utilizadas possuem
 integração semelhante e por isso foram selecionadas. Por fim, para criar
 diagramas utilizamos essa ferramenta por melhor captar as
 necessidades da nossa solução.
-
-Liste quais ferramentas foram empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível.
- 
-> **Possíveis Ferramentas que auxiliarão no gerenciamento**: 
-> - [Slack](https://slack.com/)
-> - [Github](https://github.com/)
