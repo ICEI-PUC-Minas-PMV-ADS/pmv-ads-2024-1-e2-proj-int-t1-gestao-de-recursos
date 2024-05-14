@@ -17,7 +17,7 @@ O projeto segue a seguinte convenção para o nome de branches:
 
 Quanto à gerência de issues, o projeto adota a seguinte convenção para etiquetas:
 
-- `P. A`: prioridade alta
+- `P.A`: prioridade alta
 - `P.M`: prioridade média
 - `P.B`: prioridade baixa
   
@@ -26,25 +26,39 @@ Quanto à gerência de issues, o projeto adota a seguinte convenção para etiqu
 
 ## Gerenciamento de Projeto
 
-### Divisão de Papéis
+A equipe segue abordagens ágeis, com a escolha do Scrum como a estrutura principal para orientar nosso processo de desenvolvimento.
+A equipe está organizada da seguinte forma:
 
-Apresente a divisão de papéis entre os membros do grupo.
+**Scrum Master: Thiago Bastani Pontel** 
 
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu 
-> Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
+**Product Owner: Nico Rocha da Costa** 
+
+**Equipe de Desenvolvimento:** 
+- Tomaz Martins Pereira Pontes 
+- Renê Matias de Misquita
+- Marcos Vinicio Araújo Almeida
+- Jessica Hora dos Santos
+- Nico Rocha da Costa
+- Thiago Bastani Pontel
+
+**Equipe de Design:**
+- Nico Rocha da Costa
+- Jessica Hora dos Santos
+- Renê Matias de Misquita
+- Marcos Vinicio Araújo Almeida
 
 ### Processo
 
-Coloque  informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
- 
-> **Links Úteis**:
-> - [Project management, made simple](https://github.com/features/project-management/)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/github/managing-your-work-on-github/about-project-boards)
-> - [Como criar Backlogs no Github](https://www.youtube.com/watch?v=RXEy6CFu9Hk)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
+A equipe de desenvolvimento seguirá com sprints por etapas para execução das atividades previstas no Backlog, onde, a cada nova etapa, haverá o planejamento das ações a serem desenvolvidas.
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/94735704/0df5e644-6290-4f0f-8533-e37c36068a16)
 
+Para gerenciar e distribuir as tarefas do projeto, a equipe está utilizando um quadro de tarefas no GitHub com o modelo KANBAN, que está organizado nas seguintes colunas:
+
+- `Backlog`: É o local onde todas as tarefas que precisam ser realizadas são registradas e isso compõe o Product Backlog. Além disso, todas as atividades que forem identificadas durante o desenvolvimento do projeto devem ser adicionadas a essa mesma lista.
+- `Ready`: Nesta coluna, são colocados os cartões de tarefas que devem ser escolhidos pelos membros da equipe
+- `In Progress`: Aqui ficam os cartões de tarefas que estão sendo feitos
+- `Done`: Esta coluna abriga os cartões de tarefas que já foram executados, revisados e considerados concluídos pela equipe.
+  
 ### Ferramentas
 As ferramentas empregadas no projeto são:
 
