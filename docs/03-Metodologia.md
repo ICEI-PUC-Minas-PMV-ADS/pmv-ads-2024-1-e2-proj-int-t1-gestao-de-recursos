@@ -1,4 +1,3 @@
-
 # Metodologia
 
 O desenvolvimento deste projeto segue a metodologia ágil SCRUM, incluindo uma planning de 1 hora às segundas e dois dias de daily de 15 minutos, às quartas e sextas. Essas reuniões são coordenadas pela Scrum Master. Os ciclos semanais estão alinhados com a conclusão de cada sprint, que é representada como um milestone e possui suas respectivas tarefas registradas como issues no GitHub.
@@ -11,16 +10,16 @@ A ferramenta de controle de versão adotada no projeto foi o Git, sendo que o Gi
 
 O projeto segue a seguinte convenção para o nome de branches:
 
-- main: versão estável já testada do software
-- feature: lançamento de funcionalidades no projeto
+- `main`: versão estável já testada do software
+- `feature`: lançamento de funcionalidades no projeto
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/94735704/a88859f7-885b-4611-86c6-3b0d27d542d9)
 
 Quanto à gerência de issues, o projeto adota a seguinte convenção para etiquetas:
 
-- P. A: prioridade alta
-- P.M: prioridade média
-- P.B: prioridade baixa
+- `P. A`: prioridade alta
+- `P.M`: prioridade média
+- `P.B`: prioridade baixa
   
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/94735704/9f069ddd-7baa-4e76-9708-545a58dae054)
 
