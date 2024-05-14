@@ -1,27 +1,29 @@
 
 # Metodologia
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
+O desenvolvimento deste projeto segue a metodologia ágil SCRUM, incluindo uma planning de 1 hora às segundas e dois dias de daily de 15 minutos, às quartas e sextas. Essas reuniões são coordenadas pela Scrum Master. Os ciclos semanais estão alinhados com a conclusão de cada sprint, que é representada como um milestone e possui suas respectivas tarefas registradas como issues no GitHub.
 
-Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Definições sobre os ambiente de trabalho utilizados pela  equipe para desenvolver o projeto. Abrange a relação de ambientes utilizados, a estrutura para gestão do código fonte, além da definição do processo e ferramenta através dos quais a equipe se organiza (Gestão de Times).
+Além disso, a entrada de novas tarefas no backlog da equipe é principalmente guiada pelas demandas do Product Owner, sendo realizadas pelos membros da equipe responsáveis pelo desenvolvimento e design.
 
 ## Controle de Versão
 
-Para a gestão do código fonte será utilizado o modelo de processo baseado no Git Flow, como mostrado na figura a seguir:
+A ferramenta de controle de versão adotada no projeto foi o Git, sendo que o Github foi utilizado para hospedagem do repositório.
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e3-proj-mov-t7-g2/assets/145401221/4ef21e18-de7c-44d6-886a-2a461704343f)
+O projeto segue a seguinte convenção para o nome de branches:
 
-A ferramenta de controle de versão adotada no projeto foi o [Git](https://git-scm.com/), sendo que o [Github](https://github.com) foi utilizado para hospedagem do repositório.
+- main: versão estável já testada do software
+- feature: lançamento de funcionalidades no projeto
 
-Quanto à gerência de issues, o projeto adota a seguinte convenção para
-etiquetas:
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/94735704/a88859f7-885b-4611-86c6-3b0d27d542d9)
 
-- `Bug` (Erro no código)
-- `Desenvolvimento` (Development)
-- `Documentação` (Documentation)
-- `Gerência de Projetos` (Project Management)
-- `Infraestrutura` (Infrastructure)
-- `Testes` (Tests)
+Quanto à gerência de issues, o projeto adota a seguinte convenção para etiquetas:
+
+- P. A: prioridade alta
+- P.M: prioridade média
+- P.B: prioridade baixa
+  
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/94735704/9f069ddd-7baa-4e76-9708-545a58dae054)
+
 
 ## Gerenciamento de Projeto
 
