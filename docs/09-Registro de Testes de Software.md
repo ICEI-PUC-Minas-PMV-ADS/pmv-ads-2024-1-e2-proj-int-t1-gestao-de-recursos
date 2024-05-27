@@ -91,7 +91,7 @@ Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identi
 
 **CT-04:** 
 
-**CT-05:**
+**CT-05:** Relatório de estoque que cruza a entrada, a saída e a produção é uma ferramenta poderosa para acompanhar e gerenciar o fluxo de produtos acabados e matéria-prima em uma operação comercial. Ele fornece uma visão abrangente do estoque, ajudando os gestores a otimizar os processos e garantir que haja sempre produtos suficientes para atender à demanda do mercado.
 
 **CT-06:**
 
