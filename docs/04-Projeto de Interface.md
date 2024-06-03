@@ -14,7 +14,7 @@ O diagrama apresenta como o sistema responderá a cada interação do usuário, 
 
 ![Exemplo de Diagrama de Fluxo](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/blob/main/docs/img/_Fluxograma-1.png)
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas de Fluxo”.
+
 
 
 ## Wireframes
