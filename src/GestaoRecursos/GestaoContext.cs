@@ -17,6 +17,7 @@ public class GestaoContext : IdentityDbContext
     public DbSet<Venda> Venda { get; set; }
     public DbSet<Usuario> Usuarios { get; set; }
     public DbSet<PerfilUsuario> PerfilUsuarios { get; set; }
+    public DbSet<Fornecedor> Fornecedores { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
@@ -33,6 +34,8 @@ public class GestaoContext : IdentityDbContext
         modelBuilder.Entity<Usuario>().HasOne(u => u.PerfilUsuario).WithMany(p => p.Usuarios).HasForeignKey(u => u.PerfilUsuarioId);
         modelBuilder.Entity<PerfilUsuario>().HasMany(p => p.Usuarios).WithOne(u => u.PerfilUsuario);
 
+        modelBuilder.Entity<Compra>(entity => entity.HasOne(x => x.Fornecedor).WithMany(x => x.Compras).HasForeignKey(x => x.FornecedorId));
+        modelBuilder.Entity<Fornecedor>(entity => entity.HasMany(x => x.Compras).WithOne(x => x.Fornecedor));
     }
 
 

@@ -7,99 +7,140 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - GestaoRecursos</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/GestaoRecursos.styles.css" asp-append-version="true" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - GestaoRecursos</title>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/GestaoRecursos.styles.css" asp-append-version="true" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
-    <header>
-        
-            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-                <div class="container-fluid">
-                    @if (SignInManager.IsSignedIn(User))
-                    {
-                        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Sistema de Gestao de
-                            Recursos </a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
-                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between ms-3">
-                            <ul class="navbar-nav flex-grow-1">
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="TipoProduto"
-                                        asp-action="Index">Tipo de Produto</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Produto"
-                                        asp-action="Index">Produto</a>
-                                </li>
-                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Venda"
-                                        asp-action="Index">Venda</a>
-                                </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Compra"
-                                   asp-action="Index">Compra</a>
+	<header class="bg-light border-bottom">
+		<div class="container-fluid d-flex justify-content-between align-items-center">
+			<button class="btn btn-light mb-2 mt-2" id="sidebarToggle">
+				<i class="bi bi-list"></i>
+			</button>
+			<div class="d-flex justify-content-center align-items-center w-100">
+				<a class="navbar-brand d-flex align-items-center justify-content-center" sp-area="" asp-controller="Produto" asp-action="Index">
+					<img class="w-25" src="https://private-user-images.githubusercontent.com/99574248/329904635-da5f58de-3b0b-479c-a97a-2d0111a997c5.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTc0MjY2NTQsIm5iZiI6MTcxNzQyNjM1NCwicGF0aCI6Ii85OTU3NDI0OC8zMjk5MDQ2MzUtZGE1ZjU4ZGUtM2IwYi00NzljLWE5N2EtMmQwMTExYTk5N2M1LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA2MDMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNjAzVDE0NTIzNFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTI3ZjY4OGM0Y2Y3MTZiMjU4ZjBlZDdiYzQ3MzY2YzBlODdlZDQ2ZDA1YTE2NTUyZDA1ODk3MmVjY2U0MTcwMTUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.vXurz_uP2EcRAx1imQebJnJMHsUWdDDcLbt1LfMKu2s" alt="brand logo" />
+				</a>
+			</div>
+		</div>
+	</header>
 
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Relatorios"
-                                   asp-action="Index">Relatorios</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios"
-                                    asp-action="Index">Usuários</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="PerfilUsuarios"
-                                   asp-action="Index">Perfis de usuários</a>
-                            </li>
-                            </ul>
-                        </div>
-                        <div class="ms-auto">
-                            
-                                <form asp-area="Identity" asp-page="/Account/Logout" method="post" id="logoutForm">
-                                    <button type="submit" class="btn btn-link">Logout</button>
-                                </form>
-                            
-                        </div>
-                    }else
-                    {
-                        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between ms-3">
-                            <ul class="navbar-nav flex-grow-1">
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register" >Register</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
-                                </li>
-                            </ul>
-                        </div>
-                    }
-                </div>
-            </nav>
-        
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+	<div class="main-content">
+		<div class="sidebar bg-light border-end">
+			<div class="d-flex flex-column p-lg-3 p-md-2 p-sm-0">
+				<ul class="navbar-nav flex-grow-1">
+					@if (SignInManager.IsSignedIn(User))
+					{
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="TipoProduto"
+							   asp-action="Index">
+								<i class="bi bi-box link-secondary">
+									<span class="txt link-secondary">Tipo de Produto</span>
+								</i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Produto"
+							   asp-action="Index">
+								<i class="bg bi-box-seam link-secondary">
+									<span class="txt link-secondary">Produto</span>
+								</i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Venda"
+							   asp-action="Index">
+								<i class="bi bi-cart link-secondary">
+									<span class="txt link-secondary">Venda</span>
+								</i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Compra"
+							   asp-action="Index">
+								<i class="bi bi-basket link-secondary">
+									<span class="txt link-secondary">Compra</span>
+								</i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Relatorios"
+							   asp-action="Index">
+								<i class="bi bi-bar-chart link-secondary">
+									<span class="txt link-secondary">Relatórios</span>
+								</i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Usuarios"
+							   asp-action="Index">
+								<i class="bi bi-people link-secondary">
+									<span class="txt link-secondary">Usuários</span>
+								</i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="PerfilUsuarios"
+							   asp-action="Index">
+								<i class="bi bi-person-badge link-secondary">
+									<span class="txt link-secondary">Perfis de usuário</span>
+								</i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Fornecedores"
+							   asp-action="Index">
+								<i class="bi bi-truck link-secondary">
+									<span class="txt link-secondary">Fornecedores</span>
+								</i>
+							</a>
+						</li>
+						
+						<div class="border-top">
+						<li class="nav-item">
+							<form asp-area="Identity" asp-page="/Account/Logout" method="post" id="logoutForm">
+								<button type="submit" class="btn link-secondary p-0">
+									<i class="bi bi-box-arrow-right"></i> Sair
+								</button>
+							</form>
+						</li>
+						</div>
+					}
+					else
+					{
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Register</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
+						</li>
+					}
+				</ul>
+			</div>
+		</div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - GestaoRecursos - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+
+		<div class="content container-sm">
+			<main role="main" class="pb-3">
+				@RenderBody()
+			</main>
+
+			<footer class="border-top footer text-muted">
+				<div class="container">
+					&copy; 2024 - GestaoRecursos - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+				</div>
+			</footer>
+		</div>
+
+		<script src="~/lib/jquery/dist/jquery.min.js"></script>
+		<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+		<script defer src="~/js/site.js" asp-append-version="true"></script>
+		@await RenderSectionAsync("Scripts", required: false)
 </body>
 
 </html>
