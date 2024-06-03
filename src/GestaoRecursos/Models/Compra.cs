@@ -1,3 +1,5 @@
+using GestaoRecursos.Models;
+
 namespace Models;
 
 public class Compra
@@ -9,4 +11,6 @@ public class Compra
     public DateTime? DataCriacao { get; set; }
     public DateTime? DataAlteracao { get; set; }
     public int Quantidade { get; set; }
+    public Fornecedor? Fornecedor { get; set; }
+    public int FornecedorId { get; set; }
 }

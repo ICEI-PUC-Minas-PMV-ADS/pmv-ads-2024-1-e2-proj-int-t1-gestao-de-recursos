@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Context;
 using Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 
 namespace GestaoRecursos.Controllers
 {
@@ -24,7 +25,7 @@ namespace GestaoRecursos.Controllers
         // GET: Compra
         public async Task<IActionResult> Index()
         {
-            var gestaoContext = _context.Compra.Include(c => c.Produto);
+            var gestaoContext = _context.Compra.Include(c => c.Produto).Include(c => c.Fornecedor);
             return View(await gestaoContext.ToListAsync());
         }
 
@@ -38,6 +39,7 @@ namespace GestaoRecursos.Controllers
 
             var compra = await _context.Compra
                 .Include(c => c.Produto)
+                .Include(c => c.Fornecedor)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (compra == null)
             {
@@ -51,6 +53,14 @@ namespace GestaoRecursos.Controllers
         public IActionResult Create()
         {
             ViewData["ProdutoId"] = new SelectList(_context.Produtos, "Id", "Nome");
+            ViewData["FornecedorId"] = new SelectList(_context.Fornecedores, "Id", "Nome").Prepend(new SelectListItem
+            { 
+                Text = "Selecione",
+                Value = "",
+                Disabled = true,
+                Selected = true
+            });
+
             return View();
         }
 
@@ -59,15 +69,17 @@ namespace GestaoRecursos.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,ProdutoId,Ativo,DataCriacao,DataAlteracao,Quantidade")] Compra compra)
+        public async Task<IActionResult> Create([Bind("Id,ProdutoId,FornecedorId,Ativo,DataCriacao,DataAlteracao,Quantidade")] Compra compra)
         {
                 compra.DataCriacao = DateTime.Now;
                 compra.DataAlteracao = DateTime.Now;
                 compra.Ativo = true;
                  _context.Add(compra);
                 await _context.SaveChangesAsync();
-                ViewData["ProdutoId"] = new SelectList(_context.Produtos, "Id", "Nome", compra.ProdutoId);
-                return RedirectToAction(nameof(Index));
+               return RedirectToAction(nameof(Index));
+
+            ViewData["FornecedorId"] = new SelectList(_context.Fornecedores, "Id", "Nome", compra.FornecedorId);
+            ViewData["ProdutoId"] = new SelectList(_context.Produtos, "Id", "Nome", compra.ProdutoId);
 
         }
 
@@ -85,6 +97,8 @@ namespace GestaoRecursos.Controllers
                 return NotFound();
             }
             ViewData["ProdutoId"] = new SelectList(_context.Produtos, "Id", "Nome", compra.ProdutoId);
+            ViewData["FornecedorId"] = new SelectList(_context.Fornecedores, "Id", "Nome", compra.FornecedorId);
+
             return View(compra);
         }
 
@@ -93,7 +107,7 @@ namespace GestaoRecursos.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,ProdutoId,Ativo,DataCriacao,DataAlteracao,Quantidade")] Compra compra)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,ProdutoId,FornecedorId,Ativo,DataCriacao,DataAlteracao,Quantidade,Fornecedor")] Compra compra)
         {
             if (id != compra.Id)
             {
@@ -119,6 +133,8 @@ namespace GestaoRecursos.Controllers
             }
 
             ViewData["ProdutoId"] = new SelectList(_context.Produtos, "Id", "Nome", compra.ProdutoId);
+            ViewData["FornecedorId"] = new SelectList(_context.Fornecedores, "Id", "Nome", compra.FornecedorId);
+
             return RedirectToAction(nameof(Index));
         }
 
@@ -132,12 +148,14 @@ namespace GestaoRecursos.Controllers
 
             var compra = await _context.Compra
                 .Include(c => c.Produto)
+                .Include(c => c.Fornecedor)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (compra == null)
             {
                 return NotFound();
             }
 
+            ViewData["FornecedorId"] = compra.Fornecedor.Nome;
             return View(compra);
         }
 
