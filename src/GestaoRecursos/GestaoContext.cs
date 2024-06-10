@@ -18,12 +18,13 @@ public class GestaoContext : IdentityDbContext
     public DbSet<Usuario> Usuarios { get; set; }
     public DbSet<PerfilUsuario> PerfilUsuarios { get; set; }
     public DbSet<Fornecedor> Fornecedores { get; set; }
+    public DbSet<ListaTecnica> ListasTecnicas { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
         modelBuilder.Entity<Produto>(entity => entity.HasMany(x => x.Vendas).WithOne(x => x.Produto));
         modelBuilder.Entity<Venda>(modelBuilder => modelBuilder.HasOne(x => x.Produto).WithMany(x => x.Vendas).HasForeignKey(x => x.ProdutoId));
-        
+
         modelBuilder.Entity<Produto>(entity => entity.HasMany(x => x.Compras).WithOne(x => x.Produto));
         modelBuilder.Entity<Compra>(modelBuilder => modelBuilder.HasOne(x => x.Produto).WithMany(x => x.Compras).HasForeignKey(x => x.ProdutoId));
 
@@ -36,6 +37,13 @@ public class GestaoContext : IdentityDbContext
 
         modelBuilder.Entity<Compra>(entity => entity.HasOne(x => x.Fornecedor).WithMany(x => x.Compras).HasForeignKey(x => x.FornecedorId));
         modelBuilder.Entity<Fornecedor>(entity => entity.HasMany(x => x.Compras).WithOne(x => x.Fornecedor));
+
+        modelBuilder.Entity<ListaTecnica>(entity => entity.HasOne(x => x.Produto).WithMany(x => x.ListasTecnicas).HasForeignKey(x => x.ProdutoId));
+        modelBuilder.Entity<Produto>(entity => entity.HasMany(x => x.ListasTecnicas).WithOne(x => x.Produto));
+
+        // materia prima cannot repeat when creating a new lista tecnica for the same product. We have to return a message 
+        modelBuilder.Entity<ListaTecnica>().HasIndex(x => new { x.ProdutoId, x.MateriaPrimaId }).IsUnique();
+
     }
 
 

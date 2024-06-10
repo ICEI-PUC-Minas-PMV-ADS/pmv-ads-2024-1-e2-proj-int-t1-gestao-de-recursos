@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GestaoRecursos.Migrations
 {
     [DbContext(typeof(GestaoContext))]
-    [Migration("20240603132916_update_Compra")]
-    partial class update_Compra
+    [Migration("20240603234146_fix_migrations")]
+    partial class fix_migrations
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

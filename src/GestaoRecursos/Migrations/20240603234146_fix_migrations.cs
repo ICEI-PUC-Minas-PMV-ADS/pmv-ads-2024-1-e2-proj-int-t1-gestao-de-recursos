@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace GestaoRecursos.Migrations
 {
     /// <inheritdoc />
-    public partial class super_migration : Migration
+    public partial class fix_migrations : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

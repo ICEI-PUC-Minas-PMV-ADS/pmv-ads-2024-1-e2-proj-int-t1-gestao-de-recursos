@@ -54,6 +54,42 @@ namespace GestaoRecursos.Migrations
                     b.ToTable("Fornecedores");
                 });
 
+            modelBuilder.Entity("GestaoRecursos.Models.ListaTecnica", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("Ativo")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("DataAlteracao")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DataCriacao")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("MateriaPrimaId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProdutoId")
+                        .HasColumnType("int");
+
+                    b.Property<float>("Quantidade")
+                        .HasColumnType("real");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MateriaPrimaId");
+
+                    b.HasIndex("ProdutoId", "MateriaPrimaId")
+                        .IsUnique();
+
+                    b.ToTable("ListasTecnicas");
+                });
+
             modelBuilder.Entity("GestaoRecursos.Models.PerfilUsuario", b =>
                 {
                     b.Property<int>("Id")
@@ -438,6 +474,25 @@ namespace GestaoRecursos.Migrations
                     b.ToTable("Venda");
                 });
 
+            modelBuilder.Entity("GestaoRecursos.Models.ListaTecnica", b =>
+                {
+                    b.HasOne("Models.Produto", "MateriaPrima")
+                        .WithMany()
+                        .HasForeignKey("MateriaPrimaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Models.Produto", "Produto")
+                        .WithMany("ListasTecnicas")
+                        .HasForeignKey("ProdutoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("MateriaPrima");
+
+                    b.Navigation("Produto");
+                });
+
             modelBuilder.Entity("GestaoRecursos.Models.Usuario", b =>
                 {
                     b.HasOne("GestaoRecursos.Models.PerfilUsuario", "PerfilUsuario")
@@ -554,6 +609,8 @@ namespace GestaoRecursos.Migrations
             modelBuilder.Entity("Models.Produto", b =>
                 {
                     b.Navigation("Compras");
+
+                    b.Navigation("ListasTecnicas");
 
                     b.Navigation("Vendas");
                 });
