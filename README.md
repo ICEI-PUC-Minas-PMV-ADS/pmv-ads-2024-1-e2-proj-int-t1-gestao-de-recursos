@@ -6,7 +6,7 @@
 
 `1 SEMESTRE de 2024 - EIXO 02`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Sistema de gerenciamento de recursos que seja acessível financeiramente e em sua usabilidade, incentivando uma melhor gestão para os pequenos empreendedores.
 
 ## Integrantes
 
