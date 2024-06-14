@@ -1,19 +1,23 @@
-﻿@model IEnumerable<Models.Produto>
+﻿@model IEnumerable<Models.Venda>
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Relatorios de Estoque:</h1>
+<h1>Relatorio:</h1>
+
 
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Nome)
+                @Html.DisplayNameFor(model => model.Produto)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TipoProduto)
+                @Html.DisplayNameFor(model => model.Quantidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NotaFiscal)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Ativo)
@@ -24,6 +28,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.DataAlteracao)
             </th>
+            
             <th></th>
         </tr>
     </thead>
@@ -31,10 +36,13 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Nome)
+                @Html.DisplayFor(modelItem => item.Produto.Id)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.TipoProduto.Id)
+                    @Html.DisplayFor(modelItem => item.Quantidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NotaFiscal)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Ativo)
