@@ -30,5 +30,8 @@ namespace GestaoRecursos.Models
 
         [Display(Name = "Data de alteração")]
         public DateTime? DataAlteracao { get; set; }
+
+        // relationships
+        public virtual List<LancamentoProducao>? LancamentosProducao { get; set; }
     }
 }
