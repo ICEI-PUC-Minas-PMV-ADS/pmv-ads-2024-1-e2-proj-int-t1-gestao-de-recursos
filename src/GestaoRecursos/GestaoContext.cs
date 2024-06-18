@@ -19,6 +19,8 @@ public class GestaoContext : IdentityDbContext
     public DbSet<PerfilUsuario> PerfilUsuarios { get; set; }
     public DbSet<Fornecedor> Fornecedores { get; set; }
     public DbSet<ListaTecnica> ListasTecnicas { get; set; }
+    public DbSet<LancamentoProducao> LancamentoProducao { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
@@ -44,7 +46,10 @@ public class GestaoContext : IdentityDbContext
         // materia prima cannot repeat when creating a new lista tecnica for the same product. We have to return a message 
         modelBuilder.Entity<ListaTecnica>().HasIndex(x => new { x.ProdutoId, x.MateriaPrimaId }).IsUnique();
 
+        modelBuilder.Entity<LancamentoProducao>(entity => entity.HasOne(x => x.ListaTecnica).WithMany(x => x.LancamentosProducao).HasForeignKey(x => x.ListaTecnicaId));
+
     }
+
 
 
 }
