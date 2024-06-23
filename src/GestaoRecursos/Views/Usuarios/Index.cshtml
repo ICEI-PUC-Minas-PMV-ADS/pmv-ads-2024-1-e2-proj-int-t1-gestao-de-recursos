@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<GestaoRecursos.Models.Usuario>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Usuários";
 }
 
-<h1>Index</h1>
+<h1>Usuários</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Criar novo</a>
 </p>
 <table class="table">
     <thead>
@@ -22,7 +22,7 @@
                 @Html.DisplayNameFor(model => model.Ativo)
             </th>
             <th>
-                Perfil de usuário
+                Perfil 
             </th>
             <th></th>
         </tr>
@@ -40,7 +40,7 @@
                 @Html.DisplayFor(modelItem => item.Ativo)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.PerfilUsuario.NomePerfil)
+                @(item.PerfilUsuario?.NomePerfil ?? "Sem Perfil")
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

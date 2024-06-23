@@ -34,7 +34,7 @@ public class GestaoContext : IdentityDbContext
         modelBuilder.Entity<TipoProduto>(entity => entity.HasMany(x => x.Produtos).WithOne(x => x.TipoProduto));
 
         modelBuilder.Entity<PerfilUsuario>().ToTable("Perfis");
-        modelBuilder.Entity<Usuario>().HasOne(u => u.PerfilUsuario).WithMany(p => p.Usuarios).HasForeignKey(u => u.PerfilUsuarioId);
+        modelBuilder.Entity<Usuario>().HasOne(u => u.PerfilUsuario).WithMany(p => p.Usuarios).HasForeignKey(u => u.PerfilUsuarioId).OnDelete(DeleteBehavior.SetNull);
         modelBuilder.Entity<PerfilUsuario>().HasMany(p => p.Usuarios).WithOne(u => u.PerfilUsuario);
 
         modelBuilder.Entity<Compra>(entity => entity.HasOne(x => x.Fornecedor).WithMany(x => x.Compras).HasForeignKey(x => x.FornecedorId));

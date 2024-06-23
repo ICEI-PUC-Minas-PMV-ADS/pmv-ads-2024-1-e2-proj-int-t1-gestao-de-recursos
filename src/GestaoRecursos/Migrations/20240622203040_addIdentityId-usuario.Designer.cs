@@ -4,6 +4,7 @@ using Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GestaoRecursos.Migrations
 {
     [DbContext(typeof(GestaoContext))]
-    partial class GestaoContextModelSnapshot : ModelSnapshot
+    [Migration("20240622203040_addIdentityId-usuario")]
+    partial class addIdentityIdusuario
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -163,13 +166,14 @@ namespace GestaoRecursos.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("IdentityUserId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("PerfilUsuarioId")
+                    b.Property<int>("PerfilUsuarioId")
                         .HasColumnType("int");
 
                     b.Property<string>("Senha")
@@ -533,7 +537,8 @@ namespace GestaoRecursos.Migrations
                     b.HasOne("GestaoRecursos.Models.PerfilUsuario", "PerfilUsuario")
                         .WithMany("Usuarios")
                         .HasForeignKey("PerfilUsuarioId")
-                        .OnDelete(DeleteBehavior.SetNull);
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("PerfilUsuario");
                 });
