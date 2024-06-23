@@ -47,7 +47,7 @@ namespace GestaoRecursos.Controllers
             {
                 return NotFound();
             }
-            ViewData["PerfilUsuarioId"] = usuario.PerfilUsuario.NomePerfil;
+            ViewData["PerfilUsuarioId"] = usuario.PerfilUsuario?.NomePerfil ?? "Sem Perfil";
             return View(usuario);
         }
 
@@ -63,7 +63,7 @@ namespace GestaoRecursos.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Nome,Id,Email,Senha,Ativo,DataCriacao,DataAlteracao,PerfilUsuarioId")] Usuario usuario)
+        public async Task<IActionResult> Create([Bind("Nome,Id,Email,Senha,Ativo,DataCriacao,DataAlteracao,PerfilUsuarioId,IdentityUserId")] Usuario usuario)
         {
             if (ModelState.IsValid)
             {
@@ -76,6 +76,8 @@ namespace GestaoRecursos.Controllers
                 var result = await _userManager.CreateAsync(user, usuario.Senha);
                 if (result.Succeeded)
                 {
+                    usuario.IdentityUserId = user.Id;
+
                     var perfilUsuario = await _context.PerfilUsuarios.FindAsync(usuario.PerfilUsuarioId);
                     if (perfilUsuario != null)
                     {
@@ -97,6 +99,7 @@ namespace GestaoRecursos.Controllers
                     {
                         ModelState.AddModelError(string.Empty, error.Description);
                     }
+                    ViewData["PerfilUsuarioId"] = new SelectList(_context.PerfilUsuarios, "Id", "NomePerfil", usuario.PerfilUsuarioId);
                     return View(usuario);
                 }
             }
@@ -126,19 +129,66 @@ namespace GestaoRecursos.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Nome,Id,Email,Senha,Ativo,DataCriacao,DataAlteracao")] Usuario usuario)
+        public async Task<IActionResult> Edit(int id, [Bind("Nome,Id,Email,Ativo,DataCriacao,DataAlteracao,PerfilUsuarioId")] Usuario usuario)
         {
             if (id != usuario.Id)
             {
                 return NotFound();
             }
 
+            ModelState.Remove("Senha");
+            ModelState.Remove("IdentityUserId");
+
             if (ModelState.IsValid)
             {
                 try
                 {
-                    usuario.DataAlteracao = DateTime.Now;
-                    _context.Update(usuario);
+                    var existingUser = await _context.Usuarios.FindAsync(id);
+                    if (existingUser == null)
+                    {
+                        return NotFound();
+                    }
+
+                    existingUser.Nome = usuario.Nome;
+                    existingUser.Email = usuario.Email;
+                    existingUser.Ativo = usuario.Ativo;
+                    existingUser.PerfilUsuarioId = usuario.PerfilUsuarioId;
+                    existingUser.DataAlteracao = DateTime.Now;
+
+                    var user = await _userManager.FindByIdAsync(existingUser.IdentityUserId);
+                    if (user == null)
+                    {
+                        return NotFound();
+                    }
+
+                    user.UserName = usuario.Email;
+                    user.Email = usuario.Email;
+
+                    var identityResult = await _userManager.UpdateAsync(user);
+                    if (!identityResult.Succeeded)
+                    {
+                        foreach (var error in identityResult.Errors)
+                        {
+                            ModelState.AddModelError(string.Empty, error.Description);
+                        }
+                        return View(usuario);
+                    }
+
+                    //atualizar roles
+                    var currentRole = await _userManager.GetRolesAsync(user);
+                    var perfilUsuario = await _context.PerfilUsuarios.FindAsync(usuario.PerfilUsuarioId);
+                    if (perfilUsuario!= null)
+                    {
+                        var newRole = await _roleManager.FindByIdAsync(perfilUsuario.RoleId);
+                        if (newRole != null)
+                        {
+                            await _userManager.RemoveFromRolesAsync(user, currentRole);
+                            await _userManager.AddToRoleAsync(user, newRole.Name);
+                        }
+                    }
+
+
+                    _context.Update(existingUser);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -154,7 +204,7 @@ namespace GestaoRecursos.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["PerfilUsuarioId"] = new SelectList(_context.PerfilUsuarios, "Id", "Nome");
+            ViewData["PerfilUsuarioId"] = new SelectList(_context.PerfilUsuarios, "Id", "NomePerfil", usuario.PerfilUsuarioId);
             return View(usuario);
         }
 
@@ -174,7 +224,7 @@ namespace GestaoRecursos.Controllers
                 return NotFound();
             }
 
-            ViewData["PerfilUsuarioId"] = usuario.PerfilUsuario.NomePerfil;
+            ViewData["PerfilUsuarioId"] = usuario.PerfilUsuario?.NomePerfil ?? "Sem perfil";
             return View(usuario);
         }
 
@@ -186,6 +236,25 @@ namespace GestaoRecursos.Controllers
             var usuario = await _context.Usuarios.FindAsync(id);
             if (usuario != null)
             {
+                var user = await _userManager.FindByIdAsync(usuario.IdentityUserId);
+                if (user != null)
+                {
+                    var usuariosDoPerfil = _context.Usuarios.Where(u => u.PerfilUsuarioId == id);
+                    foreach(var item in usuariosDoPerfil)
+                    {
+                        item.PerfilUsuarioId = null;
+                    }
+
+                    var identityResult = await _userManager.DeleteAsync(user);
+                    if (!identityResult.Succeeded)
+                    {
+                        foreach (var error in identityResult.Errors)
+                        {
+                            ModelState.AddModelError(string.Empty, error.Description);
+                        }
+                        return View(usuario);
+                    }
+                }
                 _context.Usuarios.Remove(usuario);
             }
 

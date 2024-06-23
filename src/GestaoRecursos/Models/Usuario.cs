@@ -12,6 +12,7 @@ namespace GestaoRecursos.Models
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
+        [NotMapped]
         [Required(ErrorMessage = "Obrigatório fornecer senha.")]
         [DataType(DataType.Password)]
         public string Senha { get; set; }
@@ -26,8 +27,8 @@ namespace GestaoRecursos.Models
         [Display(Name = "Data de alteração")]
         public DateTime? DataAlteracao { get; set; }
 
-        [Required(ErrorMessage = "Obrigatório selecionar um perfil.")]
         [Display(Name = "Perfil")]
-        public int PerfilUsuarioId { get; set; }
+        public int? PerfilUsuarioId { get; set; }
+        public string? IdentityUserId { get; set; }
     }
 }
