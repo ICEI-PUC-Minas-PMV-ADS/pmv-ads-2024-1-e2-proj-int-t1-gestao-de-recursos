@@ -1,14 +1,16 @@
 # Registro de Testes de Usabilidade
 
-Após realizar os testes de usabilidade, obtém-se um relatório a partir das análises realizadas. O Registro de Testes de Usabilidade é um relatório que contém as evidências dos testes e relatos dos usuários participantes, baseado no Plano de Testes de Usabilidade desenvolvido para os casos de uso desta etapa.
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Registro de Testes de Usabilidade”.
-
+ | **Caso de Teste** 	| **CTU-01 – Interface intuitiva e clara** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RNF-001 - O sistema deve ter interface de usuário intuitiva e clara.  |
+|Registro de evidência |https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/99574248/b34e85a9-d74c-424a-8445-dc8be9e8c748 |
+|Relatório | Interface faz o uso de icons e texto para facilitar a compreensão das funcionalidades do sistema. As cores dos botões seguem um sistema de cores padrão e comum atrelado a suas funções. Descritivos de links e títulos de páginas não estão tão claros devido estarem escritos em inglês, impactando na compreensão e eficácia durante a navegação. |
 
 | **Caso de Teste** 	| **CTU-02 – Compatibilidade com Navegadores** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RNF-002 - O sistema deve ser compatível com os principais navegadores (Google Chrome, Firefox, Microsoft Edge). |
-|Registro de evidência | <video width="320" height="240" controls> <source src="/vid\teste - compatibilidade.mp4" ></video> |
+|Registro de evidência | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/99574248/5c8fb997-eb80-4128-8d62-2b9501b8df4e|
 | Relatório | Aplicação é compatível com os principais navegadores (Chrome, Firefox, Edge). |
 
 | **Caso de Teste** 	| **CTU-03 -Boas Práticas** 	|
@@ -23,10 +25,14 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Registro de
 |Registro de evidência |  https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/99574248/1946607c-6169-446c-9116-1713e0183a87 |
 |Relatório | Autenticação de acesso está funcionando como esperado. Usuário tem acesso concedido com login válido, e acesso negado com campos vazios ou inválidos. |
 
+ | **Caso de Teste** 	| **CTU-05 – Responsividade** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RNF-005 - sistema deve ser responsivo e se adaptar a diferentes tamanhos de tela (desktop, celular, tablet).  |
+|Registro de evidência |  https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/99574248/9b38ec02-5a9a-4da2-8144-c129a2fd5a82|
+|Relatório | A interface da aplicação se adapta aos diferentes tamanhos de tamanhos. É possível acessar as funcionalidades com os diferentes tamanhos de tela.  |
 
-
-
-
-
-> **Links Úteis**:
-> - [Ferramentas de Testes de Usabilidade]https://www.usability.gov/how-to-and-tools/resources/templates.html 
+ | **Caso de Teste** 	| **CTU-06 – Modularização** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RNF-006 - O sistema deve ser desenvolvido de forma modular.  |
+|Registro de evidência | Módulos analisados: <br>   <br> Models:<img > <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/99574248/9a9fa21e-e13b-4fd0-a8f3-5d7ac74f9e14" width="500" > <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/99574248/7108990d-5863-4226-9428-9770ba5a638a" width="500" >  <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/99574248/9ee386e3-3c60-4d1f-807f-2f73cb421dd3" width="500" > <br><br>2. Controllers <br> <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/99574248/aa6e4345-9338-4d4c-91a7-0b35dad8ebe7" width="500" > <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/99574248/e9fccbdb-1bea-4a06-a0d9-f26cf98f1db8" width="500" >  <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/99574248/61c79d2d-2dec-4bcb-a0ee-84c701934aca" width="500" > <br><br> <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/99574248/f36b29d0-6b34-4eed-b470-a03399a9405b" width="500" > <img src= "https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/99574248/a241bdc8-c7ff-422b-bd31-46b91a702806" width="500" > <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/99574248/4e265aa7-120c-41ae-b9ee-862b747bb0bf" width="500" > <br><br> <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/99574248/1e7505ad-c55e-4e26-aa4a-615a42322cd6" width="500" > <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/99574248/2862a40c-270c-4a0c-b262-0fa473ff9dd5" width="500" > <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/99574248/7a7fbdb7-2b89-439d-9b35-c66567923a7d" width="500" > <br> <br> |
+|Relatório | Eficácia: As funcionalidades dos módulos testados durante os testes de software mostraram resultados que atendem os requisitos em sua grande maioria, mostrando eficácia dentro do objetivo proposto. <br> <br> Coesão: Os módulos apresentam propriedades que trabalham para a funcionalidade do mesmo, operações bem definidas seguindo os objetidos do CRUD e as especificidades de cada módulo. Não possuem propriedades ou operações soltas que não atendem ao objeto comum daquele módulo. <br><br>  Acoplamento: models possuem no mínimo uma dependência com outro módulo em forma dos relacionamentos entre as entidades. Depêndencia entre as classes não necessariamente afeta a funcionalidade dos módulos de forma significativa, constando um nível de acoplamento fraco/baixo.  |
