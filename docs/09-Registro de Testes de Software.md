@@ -31,7 +31,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | **Caso de Teste** 	| **CT-05 – Relatório de estoque** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF - 13 - O sistema deve conter uma parte dedicada a relatório de estoque (Cruzando a saída, a entrada e a produção, para relatar quanto há de produto acabado e matéria prima em estoque) |
-|Registro de evidência |  |
+|Registro de evidência | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e2-proj-int-t1-gestao-de-recursos/assets/65174193/81189006-fda7-4cdf-b30a-ac9112f70550
 | Avaliação | Relatório de estoque que cruza a entrada, a saída e a produção é uma ferramenta poderosa para acompanhar e gerenciar o fluxo de produtos acabados e matéria-prima em uma operação comercial. Ele fornece uma visão abrangente do estoque, ajudando os gestores a otimizar os processos e garantir que haja sempre produtos suficientes para atender à demanda do mercado.|
 
 | **Caso de Teste** 	| **CT-06 – Lançamento de mercadoria** 	|
