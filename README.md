@@ -10,7 +10,7 @@ Sistema de gerenciamento de recursos que seja acessível financeiramente e em su
 
 ## Integrantes
 
-- Tomaz Martins Pereira Pontes 
+- Tomaz Martins
 - Renê Matias de Misquita
 - Marcos Vinicio Araújo Almeida
 - Jessica Hora dos Santos
